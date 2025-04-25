@@ -4,60 +4,66 @@
  */
 package Model;
 
+import java.util.Date;
+
 /**
  *
  * @author davic
  */
-public class Pessoa {
+    abstract public class Pessoa {
     protected  int id;
+    protected String nome;
+    protected char sexo;
+    protected Date datanascimento;
+    protected int rg;
     protected String email;
     protected String empresa;
-    protected String senha;
 
-    public Pessoa(int id, String email, String empresa, String senha) {
+    public Pessoa(int id, String email) {
         this.id = id;
+        this.email = email;
+    }
+
+    public Pessoa(int id, String nome, char sexo, Date datanascimento, int rg, String email, String empresa) {
+        this.id = id;
+        this.nome = nome;
+        this.sexo = sexo;
+        this.datanascimento = datanascimento;
+        this.rg = rg;
         this.email = email;
         this.empresa = empresa;
-        this.senha = senha;
     }
-
-    public Pessoa(int id, String email, String senha) {
-        this.id = id;
-        this.email = email;
-        this.senha = senha;
-    }
-    
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getNome() {
+        return nome;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public Date getDatanascimento() {
+        return datanascimento;
+    }
+
+    public int getRg() {
+        return rg;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getEmpresa() {
         return empresa;
     }
-
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+    
+    
+    
+    
     
 }

@@ -21,6 +21,33 @@ public class DataCenter {
         this.localizacao = localizacao;
         this.consumoMensalKWh = consumoMensalKWh;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getLocalizacao() {
+        return localizacao;
+    }
+
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
+    }
+
+    public float getConsumoMensalKWh() {
+        return consumoMensalKWh;
+    }
+
+    public void setConsumoMensalKWh(float consumoMensalKWh) {
+        this.consumoMensalKWh = consumoMensalKWh;
+    }
+    
+    
+    
     }
     
    

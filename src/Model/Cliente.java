@@ -4,6 +4,8 @@
  */
 package Model;
 
+import java.util.Date;
+
 /**
  *
  * @author davic
@@ -15,8 +17,17 @@ public class Cliente extends Pessoa{
     private String endereco;
     private String cep; 
 
-    public Cliente(int cnpj, String classificacao, String setor, String endereco, String cep, int id, String email, String empresa, String senha) {
-        super(id, email, empresa, senha);
+    public Cliente(int cnpj, String classificacao, String setor, String endereco, String cep, int id, String nome, char sexo, Date datanascimento, int rg, String email, String empresa) {
+        super(id, nome, sexo, datanascimento, rg, email, empresa);
+        this.cnpj = cnpj;
+        this.classificacao = classificacao;
+        this.setor = setor;
+        this.endereco = endereco;
+        this.cep = cep;
+    } 
+
+    public Cliente(int cnpj, String classificacao, String setor, String endereco, String cep, int id, String email) {
+        super(id, email);
         this.cnpj = cnpj;
         this.classificacao = classificacao;
         this.setor = setor;
@@ -24,15 +35,7 @@ public class Cliente extends Pessoa{
         this.cep = cep;
     }
 
-    public Cliente(int cnpj, String classificacao, String setor, String endereco, String cep, int id, String email, String senha) {
-        super(id, email, senha);
-        this.cnpj = cnpj;
-        this.classificacao = classificacao;
-        this.setor = setor;
-        this.endereco = endereco;
-        this.cep = cep;
-    }
-
+    
     public int getCnpj() {
         return cnpj;
     }
@@ -64,27 +67,12 @@ public class Cliente extends Pessoa{
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    @Override
-public String toString() {
-    return "Cliente{" +
-           "cnpj=" + cnpj +
-           ", classificacao='" + classificacao + '\'' +
-           ", setor='" + setor + '\'' +
-           ", endereco='" + endereco + '\'' +
-           ", cep='" + cep + '\'' +
-           ", id=" + id +
-           ", email='" + email + '\'' +
-           ", empresa='" + empresa + '\'' +
-           '}';
-}
 
+    public String getCep() {
+        return cep;
+    }
 
-    
- 
-    
-    
-    
-    
-    
-    
+    public void setCep(String cep) {
+        this.cep = cep;
+    }     
 }

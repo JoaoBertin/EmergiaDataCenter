@@ -4,6 +4,8 @@
  */
 package Controller;
 
+import Controller.Helper.LoginHelper;
+import Model.Usuario;
 import View.Cadastro;
 
 /**
@@ -13,22 +15,21 @@ import View.Cadastro;
 public class LoginController {
 
     private final Cadastro view;
+    private LoginHelper helper;
 
     public LoginController(Cadastro view) {
         this.view = view;
+        this.helper = new LoginHelper(view);
     }
     
     
     public void entrarNoSistema(){
-        
-        String email = view.getTxtEmail().getText();
-        String senha = view.getTxtSenha().getText();
-        
-        
-        
-        
-    // Pega os dados do Usurio da view e do Banco e caso ele tiver o mesmo usuario e senha que o do Banco ele redireciona para o menu
-    // Caso não acontecer o login vai aparecer uma mensagem dizendo "Usuario ou senha incorretos"
+        // Pegar o Usuario da view
+        Usuario usuario = helper.obterModelo();
+    
+        //Pesquisa Usuario no Banco
+        //Se o usuario da view tiver o mesmo usuario e senha vindo do banco vai direcionar ele para o menu
+        // Caso não acontecer o login vai aparecer uma mensagem dizendo "Usuario ou senha incorretos"
     }
     
     public void fizTarefa(){
