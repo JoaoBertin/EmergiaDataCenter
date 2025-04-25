@@ -4,17 +4,24 @@
  */
 package View;
 
+import Controller.LoginController;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author davic
  */
 public class Cadastro extends javax.swing.JFrame {
 
+    private final LoginController controller;
+
     /**
      * Creates new form Cadastro
      */
     public Cadastro() {
         initComponents();
+        controller = new LoginController(this);
     }
 
     /**
@@ -33,6 +40,7 @@ public class Cadastro extends javax.swing.JFrame {
         lblFundoLogin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblLogin.setFont(new java.awt.Font("Arial", 0, 40)); // NOI18N
@@ -55,6 +63,11 @@ public class Cadastro extends javax.swing.JFrame {
 
         btnEntrar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnEntrar.setText("ENTRAR");
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 580, -1, -1));
 
         lblFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Cadastro.jpg"))); // NOI18N
@@ -66,6 +79,11 @@ public class Cadastro extends javax.swing.JFrame {
     private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailActionPerformed
+
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        // Executa quando clicamos no botão
+        this.controller.fizTarefa();
+    }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -109,4 +127,26 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtSenha;
     // End of variables declaration//GEN-END:variables
+
+    public void exibeMensagem(String mensagem) {
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
+
+    public JTextField getTxtEmail() {
+        return txtEmail;
+    }
+
+    public void setTxtEmail(JTextField txtEmail) {
+        this.txtEmail = txtEmail;
+    }
+
+    public JTextField getTxtSenha() {
+        return txtSenha;
+    }
+
+    public void setTxtSenha(JTextField txtSenha) {
+        this.txtSenha = txtSenha;
+    }
+    
+    
 }

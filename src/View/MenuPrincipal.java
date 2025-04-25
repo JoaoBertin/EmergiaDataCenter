@@ -35,9 +35,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         mnRel = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
 
         mnCadastro.setText("Cadastro");
         mnCadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
