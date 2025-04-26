@@ -37,6 +37,8 @@ public class Cadastro extends javax.swing.JFrame {
         txtEmail = new javax.swing.JTextField();
         txtSenha = new javax.swing.JTextField();
         btnEntrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         lblFundoLogin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,11 +57,11 @@ public class Cadastro extends javax.swing.JFrame {
                 txtEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, 360, -1));
+        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, 360, -1));
 
         txtSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txtSenha.setText("Senha");
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 510, 360, -1));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 660, 360, -1));
 
         btnEntrar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnEntrar.setText("ENTRAR");
@@ -68,10 +70,20 @@ public class Cadastro extends javax.swing.JFrame {
                 btnEntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 580, -1, -1));
+        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 720, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("DIGITTE SEU EMAIL:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 540, -1, 20));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("DIGITE SUA SENHA :");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 630, -1, -1));
 
         lblFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Cadastro.jpg"))); // NOI18N
-        getContentPane().add(lblFundoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 900, 1140));
+        getContentPane().add(lblFundoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1020, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -122,6 +134,8 @@ public class Cadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblFundoLogin;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JTextField txtEmail;

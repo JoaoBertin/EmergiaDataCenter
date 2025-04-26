@@ -31,9 +31,6 @@ public class Consulta extends javax.swing.JFrame {
         txtECETI = new javax.swing.JTextField();
         txtECSR = new javax.swing.JTextField();
         txtECIS = new javax.swing.JTextField();
-        txtEFC = new javax.swing.JTextField();
-        txtFTF = new javax.swing.JTextField();
-        btnCalcuEmergia = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,15 +50,6 @@ public class Consulta extends javax.swing.JFrame {
 
         txtECIS.setText("jTextField4");
         getContentPane().add(txtECIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 470, -1, -1));
-
-        txtEFC.setText("jTextField1");
-        getContentPane().add(txtEFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 350, -1, -1));
-
-        txtFTF.setText("jTextField2");
-        getContentPane().add(txtFTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 390, -1, -1));
-
-        btnCalcuEmergia.setText("jButton1");
-        getContentPane().add(btnCalcuEmergia, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 440, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -105,14 +93,11 @@ public class Consulta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalcuEmergia;
     private javax.swing.JButton btnCalcuEnergia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField txtECETI;
     private javax.swing.JTextField txtECIS;
     private javax.swing.JTextField txtECSR;
-    private javax.swing.JTextField txtEFC;
     private javax.swing.JTextField txtETDC;
-    private javax.swing.JTextField txtFTF;
     // End of variables declaration//GEN-END:variables
 }
