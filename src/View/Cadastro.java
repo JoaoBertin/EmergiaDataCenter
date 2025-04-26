@@ -94,7 +94,7 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // Executa quando clicamos no botão
-        this.controller.fizTarefa();
+        this.controller.entrarNoSistema();
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**

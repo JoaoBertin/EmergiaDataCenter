@@ -7,6 +7,7 @@ package Controller;
 import Controller.Helper.LoginHelper;
 import Model.Usuario;
 import View.Cadastro;
+import View.MenuPrincipal;
 
 /**
  *
@@ -26,6 +27,10 @@ public class LoginController {
     public void entrarNoSistema(){
         // Pegar o Usuario da view
         Usuario usuario = helper.obterModelo();
+        
+        MenuPrincipal menu =  new MenuPrincipal();
+        menu.setVisible(true);
+        this.view.dispose();
     
         //Pesquisa Usuario no Banco
         //Se o usuario da view tiver o mesmo usuario e senha vindo do banco vai direcionar ele para o menu
