@@ -26,36 +26,76 @@ public class Consulta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnCalcuEnergia = new javax.swing.JButton();
-        txtETDC = new javax.swing.JTextField();
-        txtECETI = new javax.swing.JTextField();
-        txtECSR = new javax.swing.JTextField();
-        txtECIS = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        txtQtdDispositivo = new javax.swing.JTextField();
+        txtPtDispositvo = new javax.swing.JTextField();
+        txtHrsUso = new javax.swing.JTextField();
+        btnAd = new javax.swing.JButton();
+        lblPtDispositivo = new javax.swing.JLabel();
+        lblHrsUso = new javax.swing.JLabel();
+        lblqtdDispositivo = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
+        lblDispositivo = new javax.swing.JLabel();
+        txtDispositivo = new javax.swing.JTextField();
+        lblQuadroBranco = new javax.swing.JLabel();
+        lblPlanoFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCalcuEnergia.setText("jButton1");
-        getContentPane().add(btnCalcuEnergia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, -1, -1));
+        txtQtdDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtQtdDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 630, 150, -1));
 
-        txtETDC.setText("jTextField1");
-        getContentPane().add(txtETDC, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, -1, -1));
+        txtPtDispositvo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtPtDispositvo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 690, 150, -1));
 
-        txtECETI.setText("jTextField2");
-        getContentPane().add(txtECETI, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+        txtHrsUso.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtHrsUso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHrsUsoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtHrsUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 750, 150, -1));
 
-        txtECSR.setText("jTextField3");
-        getContentPane().add(txtECSR, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, -1, -1));
+        btnAd.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnAd.setText("Adicionar Dispositivo");
+        getContentPane().add(btnAd, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 830, -1, -1));
 
-        txtECIS.setText("jTextField4");
-        getContentPane().add(txtECIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 470, -1, -1));
+        lblPtDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblPtDispositivo.setText("Potência de cada dispositivo:");
+        getContentPane().add(lblPtDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 690, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        lblHrsUso.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblHrsUso.setText("Tempo médio em horas do dispositivo em uso:");
+        getContentPane().add(lblHrsUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 750, -1, -1));
+
+        lblqtdDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblqtdDispositivo.setText("Quantidade do dispositivo:");
+        getContentPane().add(lblqtdDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 630, -1, -1));
+
+        lblTitulo.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblTitulo.setText("Cálculo do Consumo de Energia Elétrica");
+        getContentPane().add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, -1, -1));
+
+        lblDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblDispositivo.setText("Qual dispositivo:");
+        getContentPane().add(lblDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 590, -1, -1));
+
+        txtDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 590, 150, -1));
+
+        lblQuadroBranco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Painel Branco.jpg"))); // NOI18N
+        lblQuadroBranco.setText("jLabel3");
+        getContentPane().add(lblQuadroBranco, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, 890, 410));
+
+        lblPlanoFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
+        getContentPane().add(lblPlanoFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1200, 1090));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtHrsUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHrsUsoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHrsUsoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,11 +133,17 @@ public class Consulta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalcuEnergia;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField txtECETI;
-    private javax.swing.JTextField txtECIS;
-    private javax.swing.JTextField txtECSR;
-    private javax.swing.JTextField txtETDC;
+    private javax.swing.JButton btnAd;
+    private javax.swing.JLabel lblDispositivo;
+    private javax.swing.JLabel lblHrsUso;
+    private javax.swing.JLabel lblPlanoFundo;
+    private javax.swing.JLabel lblPtDispositivo;
+    private javax.swing.JLabel lblQuadroBranco;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblqtdDispositivo;
+    private javax.swing.JTextField txtDispositivo;
+    private javax.swing.JTextField txtHrsUso;
+    private javax.swing.JTextField txtPtDispositvo;
+    private javax.swing.JTextField txtQtdDispositivo;
     // End of variables declaration//GEN-END:variables
 }

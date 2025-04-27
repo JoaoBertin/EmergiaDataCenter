@@ -60,7 +60,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(mnCadastro);
 
-        mnOperação.setText("Operação");
+        mnOperação.setText("Cálculo");
         mnOperação.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuBar1.add(mnOperação);
 
