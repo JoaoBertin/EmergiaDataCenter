@@ -34,11 +34,18 @@ public class Cadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         lblLogin = new javax.swing.JLabel();
+        lblCNPJ = new javax.swing.JLabel();
+        lblEmpresa = new javax.swing.JLabel();
+        txtEmpresa = new javax.swing.JTextField();
+        txtCNPJ = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
+        txtConfSenha = new javax.swing.JTextField();
         txtSenha = new javax.swing.JTextField();
-        btnEntrar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JButton();
+        btnRegistro = new javax.swing.JButton();
+        jScrollBar1 = new javax.swing.JScrollBar();
+        lblEmail = new javax.swing.JLabel();
+        lblSenha = new javax.swing.JLabel();
         lblFundoLogin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,43 +54,75 @@ public class Cadastro extends javax.swing.JFrame {
 
         lblLogin.setFont(new java.awt.Font("Arial", 0, 40)); // NOI18N
         lblLogin.setForeground(new java.awt.Color(255, 255, 255));
-        lblLogin.setText("LOGIN DA EMPRESA ");
-        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 410, -1));
+        lblLogin.setText("CADASTRO DA EMPRESA ");
+        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
+
+        lblCNPJ.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblCNPJ.setForeground(new java.awt.Color(255, 255, 255));
+        lblCNPJ.setText("DIGITE O CNPJ DA EMPRESA:");
+        getContentPane().add(lblCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 440, -1, -1));
+
+        lblEmpresa.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblEmpresa.setForeground(new java.awt.Color(255, 255, 255));
+        lblEmpresa.setText("NOME DA EMPRESA:");
+        getContentPane().add(lblEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, -1, -1));
+
+        txtEmpresa.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        txtEmpresa.setText("Nome:");
+        getContentPane().add(txtEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 360, 30));
+
+        txtCNPJ.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        txtCNPJ.setText("CNPJ:");
+        getContentPane().add(txtCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, 360, -1));
 
         txtEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        txtEmail.setText("Email");
+        txtEmail.setText("Email:");
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 570, 360, -1));
+        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 540, 360, -1));
+
+        txtConfSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        txtConfSenha.setText("Confirmar Senha");
+        getContentPane().add(txtConfSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 650, 360, 30));
 
         txtSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        txtSenha.setText("Senha");
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 660, 360, -1));
+        txtSenha.setText("Senha:");
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 610, 360, -1));
 
-        btnEntrar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        btnEntrar.setText("ENTRAR");
-        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+        btnLogin.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnLogin.setText("Ja tem conta? Faça login por aqui.");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEntrarActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 720, -1, -1));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 750, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("DIGITTE SEU EMAIL:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 540, -1, 20));
+        btnRegistro.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        btnRegistro.setText("REGISTRAR-SE");
+        btnRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistroActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 700, -1, -1));
+        getContentPane().add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, -2, 10, 1030));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("DIGITE SUA SENHA :");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 630, -1, -1));
+        lblEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(255, 255, 255));
+        lblEmail.setText("DIGITTE SEU EMAIL:");
+        getContentPane().add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, -1, 20));
+
+        lblSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblSenha.setForeground(new java.awt.Color(255, 255, 255));
+        lblSenha.setText("DIGITE SUA SENHA :");
+        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 580, -1, -1));
 
         lblFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Cadastro.jpg"))); // NOI18N
-        getContentPane().add(lblFundoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1020, -1));
+        getContentPane().add(lblFundoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -92,10 +131,14 @@ public class Cadastro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailActionPerformed
 
-    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+    private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
         // Executa quando clicamos no botão
         this.controller.entrarNoSistema();
-    }//GEN-LAST:event_btnEntrarActionPerformed
+    }//GEN-LAST:event_btnRegistroActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,12 +176,19 @@ public class Cadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEntrar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnRegistro;
+    private javax.swing.JScrollBar jScrollBar1;
+    private javax.swing.JLabel lblCNPJ;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblEmpresa;
     private javax.swing.JLabel lblFundoLogin;
     private javax.swing.JLabel lblLogin;
+    private javax.swing.JLabel lblSenha;
+    private javax.swing.JTextField txtCNPJ;
+    private javax.swing.JTextField txtConfSenha;
     private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtEmpresa;
     private javax.swing.JTextField txtSenha;
     // End of variables declaration//GEN-END:variables
 

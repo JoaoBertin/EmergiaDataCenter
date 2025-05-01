@@ -31,6 +31,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnCadastro = new javax.swing.JMenu();
@@ -41,8 +42,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("<html>\nA emergia é um conceito desenvolvido por Howard T. Odum, <br><br>  \nque representa a quantidade total de energia — direta e indiretamente utilizada — necessária para produzir um bem ou serviço, <br><br> \nconsiderando todas as formas de energia envolvidas, como solar, eólica, combustíveis fósseis e trabalho humano.<br><br>\nDiferente da energia convencional, que apenas quantifica a quantidade, a emergia avalia também a qualidade e a origem dessas energias,  <br><br>\npermitindo uma análise mais abrangente da sustentabilidade de processos e sistemas.<br><br>\nExpressa em emjoules (Joules equivalentes solares), a emergia oferece uma base comum para comparar diferentes recursos e serviços, <br><br> \nauxiliando na tomada de decisões que visam a eficiência energética e a preservação ambiental. <br><br>\n</html>\n");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, -1, 380));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1630, -1));
 
         mnCadastro.setText("Cadastro");
         mnCadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -68,20 +77,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(mnRel);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 800, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(138, 138, 138))
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -127,6 +122,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
