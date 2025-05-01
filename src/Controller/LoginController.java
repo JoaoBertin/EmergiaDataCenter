@@ -4,43 +4,27 @@
  */
 package Controller;
 
-import Controller.Helper.LoginHelper;
-import Model.Usuario;
+import java.sql.Connection;
+import Model.DAO.Conexao;
+import Model.DAO.LoginDAO;
 import View.Cadastro;
-import View.MenuPrincipal;
+import java.sql.SQLException;
+
 
 /**
  *
  * @author hide
  */
 public class LoginController {
-
-    private final Cadastro view;
-    private LoginHelper helper;
-
-    public LoginController(Cadastro view) {
-        this.view = view;
-        this.helper = new LoginHelper(view);
-    }
     
-    
-    public void entrarNoSistema(){
-        // Pegar o Usuario da view
-        Usuario usuario = helper.obterModelo();
+    public void cadastroUsuario(Cadastro view) throws SQLException{
         
-        MenuPrincipal menu =  new MenuPrincipal();
-        menu.setVisible(true);
-        this.view.dispose();
+        Connection conexao = new Conexao().getConnection();
+        LoginDAO cadastro = new LoginDAO();
+        cadastro.cadastrarUsuario(view.getTxtEmpresa().getText(), view.getTxtEmail().getText(), view.getTxtSenha().getText(), view.getTxtCNPJ().getText());
     
-        //Pesquisa Usuario no Banco
-        //Se o usuario da view tiver o mesmo usuario e senha vindo do banco vai direcionar ele para o menu
-        // Caso não acontecer o login vai aparecer uma mensagem dizendo "Usuario ou senha incorretos"
+    
     }
-    
-    public void fizTarefa(){
-        System.out.println("Procurando dados do Banco");
-        
-        this.view.exibeMensagem("Logado com sucesso");
-    }
-    
+
+   
 }

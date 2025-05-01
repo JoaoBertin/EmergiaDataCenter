@@ -10,19 +10,37 @@ import java.util.Date;
  *
  * @author davic
  */
-public class Usuario extends Pessoa {
-    protected String senha;
-    protected int nivelacesso;
+public class Usuario{
+    
+    private String nome_empresa, email, senha, cnpj;
 
-    public Usuario(int id, String email, String senha) {
-        super(id, email);
+    public Usuario(String email, String senha) {
+        this.email = email;
         this.senha = senha;
     }
-
-    public Usuario(String senha, int nivelacesso, int id, String nome, char sexo, Date datanascimento, int rg, String email, String empresa) {
-        super(id, nome, sexo, datanascimento, rg, email, empresa);
+    
+    public void cadastrar(String nome_empresa, String email, String senha, String cnpj){
+        this.nome_empresa = nome_empresa;
+        this.email = email;
         this.senha = senha;
-        this.nivelacesso = nivelacesso;
+        this.cnpj = cnpj;
+    
+    }
+
+    public String getNome_empresa() {
+        return nome_empresa;
+    }
+
+    public void setNome_empresa(String nome_empresa) {
+        this.nome_empresa = nome_empresa;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSenha() {
@@ -33,13 +51,14 @@ public class Usuario extends Pessoa {
         this.senha = senha;
     }
 
-    public int getNivelacesso() {
-        return nivelacesso;
+    public String getCnpj() {
+        return cnpj;
     }
 
-    public void setNivelacesso(int nivelacesso) {
-        this.nivelacesso = nivelacesso;
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
-
+    
+    
     
 }

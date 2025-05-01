@@ -39,7 +39,7 @@ public class Main {
         Date dataNascimento = new Date(92, 5, 15); // Ano 1992, Junho 15 (Data em formato antigo, considere usar um formato moderno)
 
         // Criando o usuário
-        Usuario usuario = new Usuario(0, "email@brabo.com", "123456");
+        Usuario usuario = new Usuario("teste@teste.com", "12345");
 
         // Imprimindo o usuário
         System.out.println(usuario.getEmail());  // Agora funcionará sem erro

@@ -5,6 +5,9 @@
 package View;
 
 import Controller.LoginController;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -14,14 +17,12 @@ import javax.swing.JTextField;
  */
 public class Cadastro extends javax.swing.JFrame {
 
-    private final LoginController controller;
-
     /**
      * Creates new form Cadastro
      */
     public Cadastro() {
         initComponents();
-        controller = new LoginController(this);
+        
     }
 
     /**
@@ -133,13 +134,55 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
         // Executa quando clicamos no botão
-        this.controller.entrarNoSistema();
+        try {
+            LoginController cadastro = new LoginController();
+            cadastro.cadastroUsuario(this);
+        } catch (SQLException ex) {
+            
+        }
+        
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLoginActionPerformed
 
+    public JTextField getTxtCNPJ() {
+        return txtCNPJ;
+    }
+
+    public void setTxtCNPJ(JTextField txtCNPJ) {
+        this.txtCNPJ = txtCNPJ;
+    }
+
+    public JTextField getTxtEmail() {
+        return txtEmail;
+    }
+
+    public void setTxtEmail(JTextField txtEmail) {
+        this.txtEmail = txtEmail;
+    }
+
+    public JTextField getTxtEmpresa() {
+        return txtEmpresa;
+    }
+
+    public void setTxtEmpresa(JTextField txtEmpresa) {
+        this.txtEmpresa = txtEmpresa;
+    }
+
+    public JTextField getTxtSenha() {
+        return txtSenha;
+    }
+
+    public void setTxtSenha(JTextField txtSenha) {
+        this.txtSenha = txtSenha;
+    }
+
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -191,26 +234,4 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JTextField txtEmpresa;
     private javax.swing.JTextField txtSenha;
     // End of variables declaration//GEN-END:variables
-
-    public void exibeMensagem(String mensagem) {
-        JOptionPane.showMessageDialog(null, mensagem);
-    }
-
-    public JTextField getTxtEmail() {
-        return txtEmail;
-    }
-
-    public void setTxtEmail(JTextField txtEmail) {
-        this.txtEmail = txtEmail;
-    }
-
-    public JTextField getTxtSenha() {
-        return txtSenha;
-    }
-
-    public void setTxtSenha(JTextField txtSenha) {
-        this.txtSenha = txtSenha;
-    }
-    
-    
 }
