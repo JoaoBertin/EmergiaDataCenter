@@ -4,6 +4,13 @@
  */
 package View;
 
+import Controller.LoginController;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author davic
@@ -72,6 +79,11 @@ public class Login extends javax.swing.JFrame {
 
         btnLogin2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnLogin2.setText("ENTRAR");
+        btnLogin2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogin2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnLogin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, -1, -1));
 
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
@@ -88,6 +100,44 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSenhaActionPerformed
 
+    private void btnLogin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogin2ActionPerformed
+     
+        if(txtEmail.getText().matches("") || txtSenha.getText().matches("")){
+           JOptionPane.showMessageDialog(rootPane, "Preencha todos os campos");
+        
+        }else{
+        
+        
+        try {
+            LoginController login = new LoginController();
+            login.loginUsuario(this);
+            MenuPrincipal telaDeMenu = new MenuPrincipal();
+            telaDeMenu.setVisible(true);
+            this.setVisible(false);
+        } catch (SQLException ex) {
+            
+        }
+        JOptionPane.showMessageDialog(rootPane, "Logado com sucesso");
+        }
+    }//GEN-LAST:event_btnLogin2ActionPerformed
+
+    public JTextField getTxtEmail() {
+        return txtEmail;
+    }
+
+    public void setTxtEmail(JTextField txtEmail) {
+        this.txtEmail = txtEmail;
+    }
+
+    public JTextField getTxtSenha() {
+        return txtSenha;
+    }
+
+    public void setTxtSenha(JTextField txtSenha) {
+        this.txtSenha = txtSenha;
+    }
+
+    
     /**
      * @param args the command line arguments
      */

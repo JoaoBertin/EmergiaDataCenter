@@ -4,11 +4,15 @@
  */
 package Model.DAO;
 
+import View.Login;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Connection;
 import java.sql.SQLException;
 
 public class LoginDAO {
+    
+    
     
     public void cadastrarUsuario(String nome_empresa, String email, String senha, String cnpj) throws SQLException{
     
@@ -21,6 +25,26 @@ public class LoginDAO {
     
     
     
+    }
+    public void login(String email, String senha) throws SQLException{
+    Connection conexao = new Conexao().getConnection();
+    String sql = "select email,senha from login where email = '"+email+"' and senha = '"+senha+"'";
+    PreparedStatement statment = conexao.prepareStatement(sql);
+    ResultSet rs = statment.executeQuery();
+    
+    if (rs.next()){
+        System.out.println("Possui");
+        
+    } else {
+        System.out.println("Não Possui");
+    }
+    
+    
+    
+    
+    
+    conexao.close();
+        
     }
     
 }

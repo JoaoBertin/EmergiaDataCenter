@@ -5,10 +5,10 @@
 package View;
 
 import Controller.LoginController;
+import javax.swing.JOptionPane;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -70,6 +70,11 @@ public class Cadastro extends javax.swing.JFrame {
 
         txtEmpresa.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txtEmpresa.setText("Nome:");
+        txtEmpresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmpresaActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 360, 30));
 
         txtCNPJ.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -134,18 +139,32 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
         // Executa quando clicamos no botão
+        
+        if(txtEmpresa.getText().matches("") || txtEmail.getText().matches("") || txtSenha.getText().matches("") || txtCNPJ.getText().matches("")){
+        JOptionPane.showMessageDialog(rootPane,"Preencha todos os campos");
+            
+        }else {
+        
         try {
             LoginController cadastro = new LoginController();
             cadastro.cadastroUsuario(this);
         } catch (SQLException ex) {
             
         }
-        
+        JOptionPane.showMessageDialog(rootPane, "Cadastro realizado com sucesso");
+        }  
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
+        Login telaDeLogin = new Login();
+        telaDeLogin.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void txtEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmpresaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmpresaActionPerformed
 
     public JTextField getTxtCNPJ() {
         return txtCNPJ;
