@@ -7,7 +7,7 @@ package Calculo;
 public class EnergiaEletrica {
     private double potenciaKwh;
     private double horasOperacao;
-    private final double transformidade = 1.15; // Transformidade pré-definida em sej (exemplo)
+    private final double transformidade = 1.15; /*(exemplo)*/
 
     public EnergiaEletrica(double potenciaKwh, double horasOperacao) {
         this.potenciaKwh = potenciaKwh;
@@ -31,8 +31,7 @@ public class EnergiaEletrica {
     }
 
     public double calcularEmergiaTotal() {
-        // Convertendo kWh para joules e considerando a transformidade
-        double energiaDisponivel = potenciaKwh * horasOperacao * 3600; // em joules
+        double energiaDisponivel = potenciaKwh * horasOperacao * 3600;
         return energiaDisponivel * transformidade; // aplicando a transformidade
     }
 
