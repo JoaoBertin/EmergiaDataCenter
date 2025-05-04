@@ -68,7 +68,6 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 300, -1));
 
         txtSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        txtSenha.setText("Senha:\n");
         txtSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSenhaActionPerformed(evt);

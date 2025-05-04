@@ -31,8 +31,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblTexto = new javax.swing.JLabel();
+        lblFundo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnCadastro = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -44,14 +44,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("<html>\nA emergia é um conceito desenvolvido por Howard T. Odum, <br><br>  \nque representa a quantidade total de energia — direta e indiretamente utilizada — necessária para produzir um bem ou serviço, <br><br> \nconsiderando todas as formas de energia envolvidas, como solar, eólica, combustíveis fósseis e trabalho humano.<br><br>\nDiferente da energia convencional, que apenas quantifica a quantidade, a emergia avalia também a qualidade e a origem dessas energias,  <br><br>\npermitindo uma análise mais abrangente da sustentabilidade de processos e sistemas.<br><br>\nExpressa em emjoules (Joules equivalentes solares), a emergia oferece uma base comum para comparar diferentes recursos e serviços, <br><br> \nauxiliando na tomada de decisões que visam a eficiência energética e a preservação ambiental. <br><br>\n</html>\n");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, -1, 380));
+        lblTexto.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTexto.setForeground(new java.awt.Color(255, 255, 255));
+        lblTexto.setText("<html>\nA emergia é um conceito desenvolvido por Howard T. Odum, <br><br>  \nque representa a quantidade total de energia — direta e indiretamente utilizada — necessária para produzir um bem ou serviço, <br><br> \nconsiderando todas as formas de energia envolvidas, como solar, eólica, combustíveis fósseis e trabalho humano.<br><br>\nDiferente da energia convencional, que apenas quantifica a quantidade, a emergia avalia também a qualidade e a origem dessas energias,  <br><br>\npermitindo uma análise mais abrangente da sustentabilidade de processos e sistemas.<br><br>\nExpressa em emjoules (Joules equivalentes solares), a emergia oferece uma base comum para comparar diferentes recursos e serviços, <br><br> \nauxiliando na tomada de decisões que visam a eficiência energética e a preservação ambiental. <br><br>\n</html>\n");
+        getContentPane().add(lblTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, -1, 380));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1630, -1));
+        lblFundo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
+        lblFundo.setText("lblPlasn");
+        getContentPane().add(lblFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1630, -1));
 
         mnCadastro.setText("Cadastro");
         mnCadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -121,11 +122,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JLabel lblFundo;
+    private javax.swing.JLabel lblTexto;
     private javax.swing.JMenu mnCadastro;
     private javax.swing.JMenu mnOperação;
     private javax.swing.JMenu mnRel;
