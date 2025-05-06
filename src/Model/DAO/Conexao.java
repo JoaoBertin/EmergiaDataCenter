@@ -16,7 +16,7 @@ public class Conexao {
     
     
     public Connection getConnection() throws SQLException{
-        Connection conexao = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/aps", "root", "1234");
+        Connection conexao = DriverManager.getConnection("jdbc:mysql://26.86.211.93:3306/aps", "root", "1234");
     return conexao;
     
     }

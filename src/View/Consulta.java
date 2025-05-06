@@ -45,18 +45,38 @@ public class Consulta extends javax.swing.JFrame {
 
         btnEnEletrica.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnEnEletrica.setText("Energia Elétrica");
+        btnEnEletrica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnEletricaActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnEnEletrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 490, 150, 40));
 
         btnFóssil.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnFóssil.setText("Combústivel Fóssil");
+        btnFóssil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFóssilActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnFóssil, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 150, 40));
 
         btnEnTermica.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnEnTermica.setText("Energia Térmica");
+        btnEnTermica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnTermicaActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnEnTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, 150, 40));
 
         btnMãoObra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnMãoObra.setText("Mão de Obra ");
+        btnMãoObra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMãoObraActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnMãoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 490, 150, 40));
 
         btnRelat.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -65,6 +85,11 @@ public class Consulta extends javax.swing.JFrame {
 
         btnMenu.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnMenu.setText("Menu Principal");
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 660, 130, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
@@ -73,6 +98,36 @@ public class Consulta extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnFóssilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFóssilActionPerformed
+        CalcuCombustivelFossil fossil = new CalcuCombustivelFossil();
+        fossil.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnFóssilActionPerformed
+
+    private void btnEnTermicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnTermicaActionPerformed
+        CalcuEnTermica termica = new CalcuEnTermica();
+        termica.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnEnTermicaActionPerformed
+
+    private void btnEnEletricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnEletricaActionPerformed
+        CalcuEnergjaElétrica eletrica = new CalcuEnergjaElétrica();
+        eletrica.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnEnEletricaActionPerformed
+
+    private void btnMãoObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMãoObraActionPerformed
+        CalcuMãoObra obra = new CalcuMãoObra();
+        obra.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnMãoObraActionPerformed
+
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+        MenuPrincipal menu = new MenuPrincipal();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
      * @param args the command line arguments

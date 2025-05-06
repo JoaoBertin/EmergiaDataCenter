@@ -114,7 +114,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         lblEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(255, 255, 255));
-        lblEmail.setText("DIGITTE SEU EMAIL:");
+        lblEmail.setText("DIGITE SEU EMAIL:");
         getContentPane().add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, -1, 20));
 
         lblSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
