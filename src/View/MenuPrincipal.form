@@ -62,7 +62,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,-88,0,0,5,-16"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,27,0,0,5,-16"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -77,11 +77,11 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;A emergia &#xe9; um conceito desenvolvido por Howard T. Odum, &lt;br&gt;&lt;br&gt;  &#xa;que representa a quantidade total de energia &#x2014; direta e indiretamente utilizada &#x2014; necess&#xe1;ria para produzir um bem ou servi&#xe7;o, &lt;br&gt;&lt;br&gt; &#xa;considerando todas as formas de energia envolvidas, como solar, e&#xf3;lica, combust&#xed;veis f&#xf3;sseis e trabalho humano.&lt;br&gt;&lt;br&gt;&#xa;Diferente da energia convencional, que apenas quantifica a quantidade, a emergia avalia tamb&#xe9;m a qualidade e a origem dessas energias,  &lt;br&gt;&lt;br&gt;&#xa;permitindo uma an&#xe1;lise mais abrangente da sustentabilidade de processos e sistemas.&lt;br&gt;&lt;br&gt;&#xa;Expressa em emjoules (Joules equivalentes solares), a emergia oferece uma base comum para comparar diferentes recursos e servi&#xe7;os, &lt;br&gt;&lt;br&gt; &#xa;auxiliando na tomada de decis&#xf5;es que visam a efici&#xea;ncia energ&#xe9;tica e a preserva&#xe7;&#xe3;o ambiental. &lt;br&gt;&lt;br&gt;&#xa;&lt;/html&gt;&#xa;"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;Emergia e Fontes de Energia: Entendendo os C&#xe1;lculos Energ&#xe9;ticos&lt;br&gt;&lt;br&gt;&#xa;&#xa;Emergia:&lt;br&gt;&lt;br&gt;&#xa;Quantidade total de energia, geralmente solar, usada para produzir bens, servi&#xe7;os ou processos. &lt;br&gt;&lt;br&gt;&#xa;Ela considera toda a energia investida desde a origem at&#xe9; o resultado final, convertida em joules solares equivalentes (seJ).&lt;br&gt;&lt;br&gt;&#xa;&#xa;Energia el&#xe9;trica: &lt;br&gt;&lt;br&gt;&#xa;Forma vers&#xe1;til de energia obtida da convers&#xe3;o de fontes como &#xe1;gua, vento ou calor. &lt;br&gt;&lt;br&gt;&#xa;Tem alto valor emerg&#xe9;tico por envolver tecnologias complexas e infraestrutura.&lt;br&gt;&lt;br&gt;&#xa;Energia de m&#xe3;o de obra:&lt;br&gt;&lt;br&gt;&#xa;Refere-se ao esfor&#xe7;o f&#xed;sico e intelectual humano nos processos produtivos.&lt;br&gt;&lt;br&gt;&#xa;Seu valor pode ser estimado pela energia dos alimentos e dos recursos usados para sustentar o trabalhador.&lt;br&gt;&lt;br&gt;&#xa;Energia t&#xe9;rmica:&lt;br&gt;&lt;br&gt;&#xa;Relacionada ao calor, usada para aquecer ambientes, cozinhar ou realizar processos industriais. &lt;br&gt;&lt;br&gt;&#xa;A efici&#xea;ncia de uso influencia diretamente o investimento emerg&#xe9;tico necess&#xe1;rio.&lt;br&gt;&lt;br&gt;&#xa;&#xa;Eenergia de combust&#xed;veis f&#xf3;sseis:&lt;br&gt;&lt;br&gt;&#xa;Petr&#xf3;leo, g&#xe1;s e carv&#xe3;o, &#xe9; altamente concentrada e n&#xe3;o renov&#xe1;vel.&lt;br&gt;&lt;br&gt;&#xa;Possui custo emerg&#xe9;tico elevado, pois levou milh&#xf5;es de anos e muita energia solar para se formar.&lt;br&gt;&lt;br&gt;&#xa;&#xa;&#xa;&lt;/html&gt;&#xa;"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="-30" width="-1" height="380"/>
+          <AbsoluteConstraints x="0" y="0" width="-1" height="620"/>
         </Constraint>
       </Constraints>
     </Component>
