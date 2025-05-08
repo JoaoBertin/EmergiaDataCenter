@@ -87,6 +87,11 @@ public class Login extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton1.setText("Não tem conta? Crie uma agora");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 520, -1, -1));
 
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
@@ -123,6 +128,12 @@ public class Login extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(rootPane, "Logado com sucesso");
         }
     }//GEN-LAST:event_btnLogin2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Cadastro cadastro = new Cadastro();
+        cadastro.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public JTextField getTxtEmail() {
         return txtEmail;
