@@ -33,10 +33,12 @@ public class EscolhaDispositivoEnEletrica extends javax.swing.JFrame {
         btnDisRede = new javax.swing.JButton();
         btnAlimentacap = new javax.swing.JButton();
         btnControleAmbientais = new javax.swing.JButton();
-        btnEnergia = new javax.swing.JButton();
-        btnMnPrincipal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -69,19 +71,22 @@ public class EscolhaDispositivoEnEletrica extends javax.swing.JFrame {
         btnControleAmbientais.setText("Controle Ambientais ");
         getContentPane().add(btnControleAmbientais, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 530, 260, -1));
 
-        btnEnergia.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        btnEnergia.setText("Energias");
-        getContentPane().add(btnEnergia, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 610, -1, -1));
-
-        btnMnPrincipal.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        btnMnPrincipal.setText("Menu Principal");
-        getContentPane().add(btnMnPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, -1, -1));
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 750, 440));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1210, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 1050));
+
+        jMenu3.setText("Menu Principal");
+        jMenuBar1.add(jMenu3);
+
+        jMenu1.setText("Energias");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Relatório");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -125,12 +130,14 @@ public class EscolhaDispositivoEnEletrica extends javax.swing.JFrame {
     private javax.swing.JButton btnAlimentacap;
     private javax.swing.JButton btnControleAmbientais;
     private javax.swing.JButton btnDisRede;
-    private javax.swing.JButton btnEnergia;
-    private javax.swing.JButton btnMnPrincipal;
     private javax.swing.JButton btnServidores;
     private javax.swing.JButton btnSisArmaze;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel lblSubti;
     private javax.swing.JLabel lblTiTulo;
     // End of variables declaration//GEN-END:variables

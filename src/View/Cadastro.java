@@ -40,7 +40,6 @@ public class Cadastro extends javax.swing.JFrame {
         txtEmpresa = new javax.swing.JTextField();
         txtCNPJ = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
-        txtConfSenha = new javax.swing.JTextField();
         txtSenha = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
         btnRegistro = new javax.swing.JButton();
@@ -86,9 +85,6 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 540, 360, -1));
-
-        txtConfSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        getContentPane().add(txtConfSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 650, 360, 30));
 
         txtSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 610, 360, -1));
@@ -243,7 +239,6 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblSenha;
     private javax.swing.JTextField txtCNPJ;
-    private javax.swing.JTextField txtConfSenha;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtEmpresa;
     private javax.swing.JTextField txtSenha;

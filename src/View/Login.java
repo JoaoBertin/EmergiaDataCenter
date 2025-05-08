@@ -39,6 +39,7 @@ public class Login extends javax.swing.JFrame {
         txtEmail = new javax.swing.JTextField();
         txtSenha = new javax.swing.JTextField();
         btnLogin2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         lblFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,17 +48,17 @@ public class Login extends javax.swing.JFrame {
         lblBemVindo.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lblBemVindo.setForeground(new java.awt.Color(255, 255, 255));
         lblBemVindo.setText("BEM VINDO NOVAMENTE !!!");
-        getContentPane().add(lblBemVindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
+        getContentPane().add(lblBemVindo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, -1, -1));
 
         lblEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(255, 255, 255));
         lblEmail.setText("DIGITE SUA SENHA:\n");
-        getContentPane().add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, -1, -1));
+        getContentPane().add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 380, -1, -1));
 
         lblSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblSenha.setText("DIGITE SEU EMAIL:\n");
-        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, -1, -1));
+        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 300, -1, -1));
 
         txtEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +66,7 @@ public class Login extends javax.swing.JFrame {
                 txtEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 300, -1));
+        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, 300, -1));
 
         txtSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txtSenha.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +74,7 @@ public class Login extends javax.swing.JFrame {
                 txtSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, 300, -1));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 420, 300, -1));
 
         btnLogin2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnLogin2.setText("ENTRAR");
@@ -82,7 +83,11 @@ public class Login extends javax.swing.JFrame {
                 btnLogin2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, -1, -1));
+        getContentPane().add(btnLogin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 470, -1, -1));
+
+        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton1.setText("Não tem conta? Crie uma agora");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 520, -1, -1));
 
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(lblFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, 1020));
@@ -173,6 +178,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblBemVindo;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblFundo;

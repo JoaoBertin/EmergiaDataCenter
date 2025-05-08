@@ -31,9 +31,10 @@ public class Consulta extends javax.swing.JFrame {
         btnFóssil = new javax.swing.JButton();
         btnEnTermica = new javax.swing.JButton();
         btnMãoObra = new javax.swing.JButton();
-        btnRelat = new javax.swing.JButton();
-        btnMenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -79,22 +80,17 @@ public class Consulta extends javax.swing.JFrame {
         });
         getContentPane().add(btnMãoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 490, 150, 40));
 
-        btnRelat.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnRelat.setText("Relatório");
-        getContentPane().add(btnRelat, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 660, 130, 30));
-
-        btnMenu.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnMenu.setText("Menu Principal");
-        btnMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenuActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 660, 130, 30));
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
         jLabel1.setText("\n");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, -1));
+
+        jMenu1.setText("Menu Principal");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Relatório");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -122,12 +118,6 @@ public class Consulta extends javax.swing.JFrame {
         obra.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnMãoObraActionPerformed
-
-    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        MenuPrincipal menu = new MenuPrincipal();
-        menu.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,10 +158,11 @@ public class Consulta extends javax.swing.JFrame {
     private javax.swing.JButton btnEnEletrica;
     private javax.swing.JButton btnEnTermica;
     private javax.swing.JButton btnFóssil;
-    private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnMãoObra;
-    private javax.swing.JButton btnRelat;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel lblTitulo;
     // End of variables declaration//GEN-END:variables
 }

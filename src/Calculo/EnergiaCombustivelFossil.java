@@ -17,9 +17,9 @@ public class EnergiaCombustivelFossil {
         this.tipoCombustivel = tipoCombustivel;
         // Definindo a transformidade com base no tipo de combustível
         if (tipoCombustivel.equalsIgnoreCase("diesel")) {
-            this.transformidade = 4.2e4; // Transformidade do diesel
+            this.transformidade = 6.6e4; // Transformidade do diesel
         } else if (tipoCombustivel.equalsIgnoreCase("gas natural")) {
-            this.transformidade = 5.4e4; // Transformidade do gás natural
+            this.transformidade = 4.8e4; // Transformidade do gás natural
         } else {
             this.transformidade = 0; // Valor padrão se o tipo for inválido
         }
@@ -56,7 +56,7 @@ public class EnergiaCombustivelFossil {
     }
 
     // Calcular o FTF diretamente com a transformidade fornecida
-    public double calcularFTF() {
+    public double calcularFTFCombústivel() {
         double energiaDisponivel = volumeConsumido * poderCalorifico;
         return transformidade * energiaDisponivel; // FTF usando o valor de transformidade diretamente
     }

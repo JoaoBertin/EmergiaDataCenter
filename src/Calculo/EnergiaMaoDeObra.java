@@ -7,12 +7,14 @@ package Calculo;
 public class EnergiaMaoDeObra {
     private int numeroTrabalhadores;
     private int horasTrabalhadas;
-    private double energiaMediaHora; // em MJ/h
-    private final double transformidade = 1.15; // Transformidade pré-definida em sej (exemplo)
+    private int diasTrabalhados;
+    private double energiaMediaHora = 1.2; // em MJ/h
+    private final double transformidade = 3.12e6; // Transformidade pré-definida em sej (exemplo)
 
-    public EnergiaMaoDeObra(int numeroTrabalhadores, int horasTrabalhadas, double energiaMediaHora) {
+    public EnergiaMaoDeObra(int numeroTrabalhadores, int horasTrabalhadas, int diasTrabalhados, double energiaMediaHora) {
         this.numeroTrabalhadores = numeroTrabalhadores;
         this.horasTrabalhadas = horasTrabalhadas;
+        this.diasTrabalhados = diasTrabalhados;
         this.energiaMediaHora = energiaMediaHora;
     }
 
@@ -32,6 +34,14 @@ public class EnergiaMaoDeObra {
         this.horasTrabalhadas = horasTrabalhadas;
     }
 
+    public int getDiasTrabalhados() {
+        return diasTrabalhados;
+    }
+
+    public void setDiasTrabalhados(int diasTrabalhados) {
+        this.diasTrabalhados = diasTrabalhados;
+    }
+    
     public double getEnergiaMediaHora() {
         return energiaMediaHora;
     }
@@ -47,8 +57,8 @@ public class EnergiaMaoDeObra {
     }
 
     // Calcular o FTF diretamente com a transformidade fornecida
-    public double calcularFTF() {
-        double energiaDisponivel = numeroTrabalhadores * horasTrabalhadas * energiaMediaHora;
+    public double calcularFTFMãoDeObra() {
+        double energiaDisponivel = ((numeroTrabalhadores * horasTrabalhadas) * diasTrabalhados) * energiaMediaHora;
         return transformidade * energiaDisponivel; // FTF usando o valor de transformidade diretamente
     }
 }
