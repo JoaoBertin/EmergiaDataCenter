@@ -4,16 +4,19 @@
  */
 package View;
 
+import Calculo.EnergiaEletrica;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author davic
  */
-public class CalcuEnergjaElétrica extends javax.swing.JFrame {
+public class CalcuEnergiaEletrica extends javax.swing.JFrame {
 
     /**
      * Creates new form Consulta
      */
-    public CalcuEnergjaElétrica() {
+    public CalcuEnergiaEletrica() {
         initComponents();
     }
 
@@ -27,8 +30,10 @@ public class CalcuEnergjaElétrica extends javax.swing.JFrame {
     private void initComponents() {
 
         txtQtdDispositivo = new javax.swing.JTextField();
-        txtPtDispositvo = new javax.swing.JTextField();
+        txtPtDispositivo = new javax.swing.JTextField();
         txtHrsUso = new javax.swing.JTextField();
+        txtDias = new javax.swing.JTextField();
+        txtResultado = new javax.swing.JTextField();
         btnAd = new javax.swing.JButton();
         lblPtDispositivo = new javax.swing.JLabel();
         lblHrsUso = new javax.swing.JLabel();
@@ -46,8 +51,8 @@ public class CalcuEnergjaElétrica extends javax.swing.JFrame {
         txtQtdDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         getContentPane().add(txtQtdDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 340, 150, -1));
 
-        txtPtDispositvo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtPtDispositvo, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 390, 150, -1));
+        txtPtDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtPtDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 390, 150, -1));
 
         txtHrsUso.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtHrsUso.addActionListener(new java.awt.event.ActionListener() {
@@ -56,9 +61,18 @@ public class CalcuEnergjaElétrica extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtHrsUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 440, 150, -1));
+        getContentPane().add(txtDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 480, 150, 30));
+
+        txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 510, 160, -1));
 
         btnAd.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnAd.setText("Confirmar Dispositivo");
+        btnAd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAd, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 550, -1, -1));
 
         lblPtDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -100,6 +114,23 @@ public class CalcuEnergjaElétrica extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHrsUsoActionPerformed
 
+    private void btnAdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdActionPerformed
+                    // TODO add your handling code here:
+      try {
+        int quantidade = Integer.parseInt(txtQtdDispositivo.getText());
+        double potencia = Double.parseDouble(txtPtDispositivo.getText());
+        double horas = Double.parseDouble(txtHrsUso.getText());
+        int dias = Integer.parseInt(txtDias.getText());
+
+        EnergiaEletrica energia = new EnergiaEletrica(potencia, horas, dias);
+
+        double resultado = energia.calcularEmergiaTotal();
+        txtResultado.setText(String.format("Emergia Total: %.2e seJ", resultado));
+
+    } catch (NumberFormatException ex) {
+        JOptionPane.showMessageDialog(this, "Por favor, insira valores numéricos válidos.");
+    }//GEN-LAST:event_btnAdActionPerformed
+    }
     /**
      * @param args the command line arguments
      */
@@ -117,21 +148,23 @@ public class CalcuEnergjaElétrica extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CalcuEnergjaElétrica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalcuEnergiaEletrica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CalcuEnergjaElétrica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalcuEnergiaEletrica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CalcuEnergjaElétrica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalcuEnergiaEletrica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CalcuEnergjaElétrica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalcuEnergiaEletrica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CalcuEnergjaElétrica().setVisible(true);
+                new CalcuEnergiaEletrica().setVisible(true);
             }
         });
     }
@@ -147,8 +180,10 @@ public class CalcuEnergjaElétrica extends javax.swing.JFrame {
     private javax.swing.JLabel lblQuadroBranco;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblqtdDispositivo;
+    private javax.swing.JTextField txtDias;
     private javax.swing.JTextField txtHrsUso;
-    private javax.swing.JTextField txtPtDispositvo;
+    private javax.swing.JTextField txtPtDispositivo;
     private javax.swing.JTextField txtQtdDispositivo;
+    private javax.swing.JTextField txtResultado;
     // End of variables declaration//GEN-END:variables
 }

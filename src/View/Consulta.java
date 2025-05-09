@@ -113,7 +113,7 @@ public class Consulta extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEnTermicaActionPerformed
 
     private void btnEnEletricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnEletricaActionPerformed
-        CalcuEnergjaElétrica eletrica = new CalcuEnergjaElétrica();
+        CalcuEnergiaEletrica eletrica = new CalcuEnergiaEletrica();
         eletrica.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnEnEletricaActionPerformed

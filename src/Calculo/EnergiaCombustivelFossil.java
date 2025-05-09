@@ -7,24 +7,35 @@ package Calculo;
 public class EnergiaCombustivelFossil {
     private double volumeConsumido; // em litros
     private double poderCalorifico; // em MJ/litro
+    private double transformidade; // sej/MJ
     private String tipoCombustivel;
-    private double transformidade; // Valor de transformidade baseado no tipo de combustível
 
-    // Construtor
-    public EnergiaCombustivelFossil(double volumeConsumido, double poderCalorifico, String tipoCombustivel) {
+    
+    public EnergiaCombustivelFossil(double volumeConsumido, double poderCalorifico1, String tipoCombustivel) {
         this.volumeConsumido = volumeConsumido;
-        this.poderCalorifico = poderCalorifico;
-        this.tipoCombustivel = tipoCombustivel;
-        // Definindo a transformidade com base no tipo de combustível
-        if (tipoCombustivel.equalsIgnoreCase("diesel")) {
-            this.transformidade = 6.6e4; // Transformidade do diesel
-        } else if (tipoCombustivel.equalsIgnoreCase("gas natural")) {
-            this.transformidade = 4.8e4; // Transformidade do gás natural
-        } else {
-            this.transformidade = 0; // Valor padrão se o tipo for inválido
+        this.tipoCombustivel = tipoCombustivel.toLowerCase();
+
+        switch (this.tipoCombustivel) {
+            case "diesel":
+                this.poderCalorifico = 36.55;
+                this.transformidade = 6.6e4;
+                break;
+            case "gás natural":
+                this.poderCalorifico = 36.66;
+                this.transformidade = 4.8e4;
+                break;
+            case "hvo":
+                this.poderCalorifico = 34.32;
+                this.transformidade = 1.24e5;
+                break;
+            default:
+                this.poderCalorifico = 0;
+                this.transformidade = 0;
+                break;
         }
     }
 
+    
     public double getVolumeConsumido() {
         return volumeConsumido;
     }
@@ -37,27 +48,22 @@ public class EnergiaCombustivelFossil {
         return poderCalorifico;
     }
 
-    public void setPoderCalorifico(double poderCalorifico) {
-        this.poderCalorifico = poderCalorifico;
+    public double getTransformidade() {
+        return transformidade;
     }
 
     public String getTipoCombustivel() {
         return tipoCombustivel;
     }
 
-    public void setTipoCombustivel(String tipoCombustivel) {
-        this.tipoCombustivel = tipoCombustivel;
-    }
-
+    
     public double calcularEmergiaTotal() {
-        // Energia em MJ * transformidade
-        double energiaDisponivel = volumeConsumido * poderCalorifico; // em MJ
-        return energiaDisponivel * transformidade; // aplicando a transformidade
+        double energiaDisponivel = volumeConsumido * poderCalorifico;
+        return energiaDisponivel * transformidade;
     }
 
-    // Calcular o FTF diretamente com a transformidade fornecida
-    public double calcularFTFCombústivel() {
-        double energiaDisponivel = volumeConsumido * poderCalorifico;
-        return transformidade * energiaDisponivel; // FTF usando o valor de transformidade diretamente
+    
+    public double calcularFTFCombustivel() {
+        return calcularEmergiaTotal();
     }
 }

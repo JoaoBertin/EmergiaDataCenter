@@ -4,6 +4,9 @@
  */
 package View;
 
+import Calculo.EnergiaMaoDeObra;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author davic
@@ -30,12 +33,11 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        txtHrsDia = new javax.swing.JTextField();
+        txtDiasOp = new javax.swing.JTextField();
+        txtTrabalhadores = new javax.swing.JTextField();
+        txtResultado = new javax.swing.JTextField();
+        btnEnMaoObra = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -61,31 +63,26 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         jLabel6.setText("Quantos dias de Operação:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 370, 100, -1));
+        txtHrsDia.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtHrsDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 370, 100, -1));
 
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 100, -1));
+        txtDiasOp.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtDiasOp, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 100, -1));
 
-        jTextField3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 330, 100, 30));
+        txtTrabalhadores.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtTrabalhadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 330, 100, 30));
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton1.setText("Relatório");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 600, -1, -1));
+        txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, 130, -1));
 
-        jButton2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton2.setText("Energias");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnEnMaoObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnEnMaoObra.setText("Confirmar Energia ");
+        btnEnMaoObra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnEnMaoObraActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 600, -1, -1));
-
-        jButton3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton3.setText("Confirmar Energia ");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 510, -1, -1));
+        getContentPane().add(btnEnMaoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 530, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 890, 460));
@@ -104,9 +101,22 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnEnMaoObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnMaoObraActionPerformed
+        try {
+        int horasPorDia = Integer.parseInt(txtHrsDia.getText());
+        int diasOperacao = Integer.parseInt(txtDiasOp.getText());
+        int numTrabalhadores = Integer.parseInt(txtTrabalhadores.getText());
+
+        EnergiaMaoDeObra maoObra = new EnergiaMaoDeObra(numTrabalhadores, horasPorDia, diasOperacao, 1.2);
+
+        double emergiaTotal = maoObra.calcularEmergiaTotal();
+
+        txtResultado.setText(String.format("%.2e sej", emergiaTotal));
+        
+    } catch (NumberFormatException ex) {
+        JOptionPane.showMessageDialog(this, "Insira apenas números válidos nos campos.");
+    }// TODO add your handling code here:
+    }//GEN-LAST:event_btnEnMaoObraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,9 +154,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnEnMaoObra;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -156,8 +164,9 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField txtDiasOp;
+    private javax.swing.JTextField txtHrsDia;
+    private javax.swing.JTextField txtResultado;
+    private javax.swing.JTextField txtTrabalhadores;
     // End of variables declaration//GEN-END:variables
 }
