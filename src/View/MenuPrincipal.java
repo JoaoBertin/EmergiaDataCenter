@@ -38,6 +38,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         mnOperação = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
         mnRel = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,6 +73,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         mnOperação.setText("Cálculo");
         mnOperação.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        mnOperação.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnOperaçãoActionPerformed(evt);
+            }
+        });
+
+        jMenuItem3.setText("Calculadora");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        mnOperação.add(jMenuItem3);
+
         jMenuBar1.add(mnOperação);
 
         mnRel.setText("Relatório");
@@ -83,8 +98,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        this.controller.navegarParaConsulta();
+        
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void mnOperaçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnOperaçãoActionPerformed
+        
+    }//GEN-LAST:event_mnOperaçãoActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        this.controller.navegarParaConsulta();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,6 +148,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JLabel lblFundo;
     private javax.swing.JLabel lblTexto;
     private javax.swing.JMenu mnCadastro;
