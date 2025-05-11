@@ -4,12 +4,11 @@
  */
 package Controller;
 
-import java.sql.Connection;
+import java.sql.*;
 import Model.DAO.Conexao;
 import Model.DAO.LoginDAO;
 import View.Cadastro;
 import View.Login;
-import java.sql.SQLException;
 
 
 /**
