@@ -12,10 +12,9 @@ import javax.swing.JOptionPane;
  * @author davic
  */
 public class CalcuMãoObra extends javax.swing.JFrame {
-
     /**
-     * Creates new form CalcuMãoObra
-     */
+
+*/
     public CalcuMãoObra() {
         initComponents();
     }
@@ -29,6 +28,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        cboxMãodeObra = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -37,6 +37,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         txtDiasOp = new javax.swing.JTextField();
         txtTrabalhadores = new javax.swing.JTextField();
         txtResultado = new javax.swing.JTextField();
+        txtResultadoTotal = new javax.swing.JTextField();
         btnEnMaoObra = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -48,16 +49,20 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        cboxMãodeObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        cboxMãodeObra.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Técnico em Redes", "Técnico de TI", "Eng. Elétrico / Téc. Eletrotécnico", "Técnico em Climatização", "Analista de Cibersegurança", "Técnico ou Engenheiro" }));
+        getContentPane().add(cboxMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
+
         jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         jLabel2.setText("Calculo de Consumo de Energia de mão de Obra");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, -1, 40));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, -1, 40));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel4.setText("N° de Trabalhadores:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel5.setText("Quantas Horas de Thabalho por dia");
+        jLabel5.setText("Quantas Horas de Thabalho por dia:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -74,7 +79,10 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         getContentPane().add(txtTrabalhadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 330, 100, 30));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, 130, -1));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, 160, -1));
+
+        txtResultadoTotal.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 490, 160, 30));
 
         btnEnMaoObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEnMaoObra.setText("Confirmar Energia ");
@@ -118,6 +126,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
 
     private void btnEnMaoObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnMaoObraActionPerformed
         try {
+        
         int horasPorDia = Integer.parseInt(txtHrsDia.getText());
         int diasOperacao = Integer.parseInt(txtDiasOp.getText());
         int numTrabalhadores = Integer.parseInt(txtTrabalhadores.getText());
@@ -180,6 +189,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEnMaoObra;
+    private javax.swing.JComboBox<String> cboxMãodeObra;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -193,6 +203,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     private javax.swing.JTextField txtDiasOp;
     private javax.swing.JTextField txtHrsDia;
     private javax.swing.JTextField txtResultado;
+    private javax.swing.JTextField txtResultadoTotal;
     private javax.swing.JTextField txtTrabalhadores;
     // End of variables declaration//GEN-END:variables
 }

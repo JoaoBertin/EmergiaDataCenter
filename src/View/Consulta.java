@@ -31,6 +31,7 @@ public class Consulta extends javax.swing.JFrame {
         btnFóssil = new javax.swing.JButton();
         btnEnTermica = new javax.swing.JButton();
         btnMãoObra = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -52,7 +53,7 @@ public class Consulta extends javax.swing.JFrame {
                 btnEnEletricaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEnEletrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 490, 150, 40));
+        getContentPane().add(btnEnEletrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 500, 150, 40));
 
         btnFóssil.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnFóssil.setText("Combústivel Fóssil");
@@ -70,7 +71,7 @@ public class Consulta extends javax.swing.JFrame {
                 btnEnTermicaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEnTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, 150, 40));
+        getContentPane().add(btnEnTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, 150, 40));
 
         btnMãoObra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnMãoObra.setText("Mão de Obra ");
@@ -79,7 +80,11 @@ public class Consulta extends javax.swing.JFrame {
                 btnMãoObraActionPerformed(evt);
             }
         });
-        getContentPane().add(btnMãoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 490, 150, 40));
+        getContentPane().add(btnMãoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, 150, 40));
+
+        jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jButton1.setText("Energia Materiais");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(595, 400, 150, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
         jLabel1.setText("\n");
@@ -184,6 +189,7 @@ public class Consulta extends javax.swing.JFrame {
     private javax.swing.JButton btnEnTermica;
     private javax.swing.JButton btnFóssil;
     private javax.swing.JButton btnMãoObra;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;

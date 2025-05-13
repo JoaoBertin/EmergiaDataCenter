@@ -16,7 +16,10 @@ public class EnergiaMaoDeObra {
         this.horasTrabalhadas = horasTrabalhadas;
         this.diasTrabalhados = diasTrabalhados;
         this.energiaMediaHora = energiaMediaHora;
+        
+        
     }
+    
 
     public int getNumeroTrabalhadores() {
         return numeroTrabalhadores;
@@ -41,7 +44,7 @@ public class EnergiaMaoDeObra {
     public void setDiasTrabalhados(int diasTrabalhados) {
         this.diasTrabalhados = diasTrabalhados;
     }
-    
+
     public double getEnergiaMediaHora() {
         return energiaMediaHora;
     }
@@ -51,14 +54,16 @@ public class EnergiaMaoDeObra {
     }
 
     public double calcularEmergiaTotal() {
-        // Energia em MJ * transformidade
-        double energiaDisponivel = numeroTrabalhadores * horasTrabalhadas * energiaMediaHora; // em MJ
-        return energiaDisponivel * transformidade; // aplicando a transformidade
+        double energiaDisponivel = numeroTrabalhadores * horasTrabalhadas * energiaMediaHora;
+        return energiaDisponivel * transformidade;
     }
 
-    // Calcular o FTF diretamente com a transformidade fornecida
-    public double calcularFTFMãoDeObra() {
-        double energiaDisponivel = ((numeroTrabalhadores * horasTrabalhadas) * diasTrabalhados) * energiaMediaHora;
-        return transformidade * energiaDisponivel; // FTF usando o valor de transformidade diretamente
+    public double calcularFTFMaoDeObra() {
+        double energiaDisponivel = numeroTrabalhadores * horasTrabalhadas * diasTrabalhados * energiaMediaHora;
+        return energiaDisponivel * transformidade;
     }
 }
+
+
+
+
