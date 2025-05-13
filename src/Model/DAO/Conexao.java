@@ -4,9 +4,7 @@
  */
 package Model.DAO;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  *
@@ -16,9 +14,15 @@ public class Conexao {
     
     
     public Connection getConnection() throws SQLException{
-        Connection conexao = DriverManager.getConnection("jdbc:mysql://sql10.freesqldatabase.com/sql10777561", "sql10777561", "qVfmPJQ5mk");
-    return conexao;
-    
+        String url = "jdbc:sqlite:aps.db";
+        Connection conexao = null;
+        
+        try{
+            conexao = DriverManager.getConnection(url);
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return conexao;
     }
     
 }

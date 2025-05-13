@@ -5,10 +5,7 @@
 package Model.DAO;
 
 import View.Login;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Connection;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class LoginDAO {
     
