@@ -8,15 +8,17 @@ import View.Login;
 import java.sql.*;
 
 public class LoginDAO {
+ // Classe responsável pela interação com o banco de dados para operações de login e cadastro de usuários.   
     
-    // Aqui é nossa query para se comunicar com o banco e adicionar os dados
     
     public void cadastrarUsuario(String nome_empresa, String email, String senha, String cnpj) throws SQLException{
-    
+    // Estabelece uma conexão com a base de dados
     Connection conexao = new Conexao().getConnection();
-    String sql = "insert into login (nome_empresa, email, senha, cnpj) values ('"+nome_empresa+"', '"+email+"','"+senha+"', '"+cnpj+"')"; // Comando do SQL para adicionar um Usuario
-    PreparedStatement statment = conexao.prepareStatement(sql); // Essa propriedade que faz a inserção da nossa query no banco de dados
-    statment.execute();
+    // Comando SQL para inserir um novo usuário na tabela 'login'
+    String sql = "insert into login (nome_empresa, email, senha, cnpj) values ('"+nome_empresa+"', '"+email+"','"+senha+"', '"+cnpj+"')"; 
+    // Prepara a instrução SQL para execução na base de dados
+    PreparedStatement statment = conexao.prepareStatement(sql); 
+    statment.execute();  // Executa a consulta para adicionar o usuário
     conexao.close();
     
     
@@ -29,7 +31,9 @@ public class LoginDAO {
     PreparedStatement statment = conexao.prepareStatement(sql);
     ResultSet rs = statment.executeQuery();
     
-    
+    // Verifica se a consulta retornou algum resultado 
+    // Se o usuário existe, imprime que possui
+    // Caso contrário, informa que não possui
     if (rs.next()){
         System.out.println("Possui");
         
@@ -41,7 +45,7 @@ public class LoginDAO {
     
     
     
-    conexao.close();
+    conexao.close(); // Fecha a conexão com a base de dados
         
     }
     

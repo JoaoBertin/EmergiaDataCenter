@@ -7,16 +7,16 @@ package Model;
 import java.util.Date;
 
 
-public class Usuario{
+public class Usuario{ // Classe que representa um usuário e suas informações
     
     private String nome_empresa, email, senha, cnpj;
 
-    public Usuario(String email, String senha) { //Construtor dos valores do login
+    public Usuario(String email, String senha) { // Construtor que inicializa o usuário com email e senha
         this.email = email;
         this.senha = senha;
     }
     
-    public void cadastrar(String nome_empresa, String email, String senha, String cnpj){ //Construtor dos valores do cadastro
+    public void cadastrar(String nome_empresa, String email, String senha, String cnpj){ // Método que cadastra um novo usuário com todos os detalhes
         this.nome_empresa = nome_empresa;
         this.email = email;
         this.senha = senha;
@@ -24,7 +24,7 @@ public class Usuario{
     
     }
         
-    //Getters e Setters dos valores
+    // Métodos para obter e definir os valores das variáveis de instância
     
     public String getNome_empresa() {
         return nome_empresa;

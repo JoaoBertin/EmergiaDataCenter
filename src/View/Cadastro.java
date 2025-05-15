@@ -126,25 +126,34 @@ public class Cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEmailActionPerformed
 
     private void btnRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroActionPerformed
-        // Executa quando clicamos no botão
+        // Validação dos campos: verifica se todos os campos obrigatórios estão preenchidos
         
         if(txtEmpresa.getText().matches("") || txtEmail.getText().matches("") || txtSenha.getText().matches("") || txtCNPJ.getText().matches("")){
+            // Se algum campo estiver vazio, exibe um diálogo de aviso
         JOptionPane.showMessageDialog(rootPane,"Preencha todos os campos");
             
         }else {
         
         try {
-            LoginController cadastro = new LoginController();
-            cadastro.cadastroUsuario(this);
-        } catch (SQLException ex) {
+            // Criação de uma nova instância do controlador de login
+            LoginController cadastro = new LoginController(); 
+            // Chama método para cadastrar usuário passando o objeto atual
+            cadastro.cadastroUsuario(this);  
+            // Cria e exibe tela de login
+            Login telaDeLogin = new Login(); 
+            telaDeLogin.setVisible(true);
+            // Oculta a tela atual
+            this.setVisible(false);
             
+        } catch (SQLException ex) {
+             // Trata exceção SQL caso ocorra um erro durante o cadastro
         }
         JOptionPane.showMessageDialog(rootPane, "Cadastro realizado com sucesso");
         }  
     }//GEN-LAST:event_btnRegistroActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        // TODO add your handling code here:
+        // Redirecionameto para a tela de login
         Login telaDeLogin = new Login();
         telaDeLogin.setVisible(true);
         this.setVisible(false);

@@ -108,19 +108,23 @@ public class Login extends javax.swing.JFrame {
     private void btnLogin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogin2ActionPerformed
         //Validação dos Campos
         if(txtEmail.getText().matches("") || txtSenha.getText().matches("")){
+            // Se um dos campos estiver vazio, exibe mensagem de erro
            JOptionPane.showMessageDialog(rootPane, "Preencha todos os campos");
         
         }else{
         
         
         try {
+            // Tentativa de realizar o login do usuário
             LoginController login = new LoginController();
+            // Chama o método para registrar o usuário que está tentando acessar
             login.loginUsuario(this);
+            // Cria uma nova instância do menu principal, que aparecerá após o login
             MenuPrincipal telaDeMenu = new MenuPrincipal();
             telaDeMenu.setVisible(true);
             this.setVisible(false);
         } catch (SQLException ex) {
-            
+            // Captura possíveis exceções de banco de dados durante o processo de login
         }
         JOptionPane.showMessageDialog(rootPane, "Logado com sucesso");
         }
