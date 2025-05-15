@@ -7,10 +7,7 @@ package View;
 import Calculo.EnergiaMaoDeObra;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author davic
- */
+
 public class CalcuMãoObra extends javax.swing.JFrame {
     /**
 

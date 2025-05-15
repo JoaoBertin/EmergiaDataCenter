@@ -7,10 +7,7 @@ package Controller;
 import View.Consulta;
 import View.MenuPrincipal;
 
-/**
- *
- * @author hide
- */
+
 public class MenuPrincipalController {
     
     

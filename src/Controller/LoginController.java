@@ -11,10 +11,7 @@ import View.Cadastro;
 import View.Login;
 
 
-/**
- *
- * @author hide
- */
+
 public class LoginController {
     
     

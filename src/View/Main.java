@@ -4,7 +4,6 @@
  */
 package View;
 
-import Model.Cliente;
 import Model.DAO.Conexao;
 import Model.Usuario;
 import java.util.Date;
@@ -31,9 +30,7 @@ public class Main {
         
         
         
-        // Criando o objeto Cliente
-        Cliente cliente = new Cliente(12345678, "Grande Porte", "Tecnologia da Informação", "Rua Teste", "98583821", 1, "email@teste.com");
-        System.out.println(cliente.getEmail());  // Agora funcionará sem erro
+        
         
         // Exemplo de como criar uma data (substitua pela data desejada)
         Date dataNascimento = new Date(92, 5, 15); // Ano 1992, Junho 15 (Data em formato antigo, considere usar um formato moderno)

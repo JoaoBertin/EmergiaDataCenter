@@ -4,10 +4,7 @@
  */
 package Calculo;
 
-/**
- *
- * @author davic
- */
+
 public class EnergiaIncorporadaMateriais {
      private double massa;
     private String tipoMaterial;

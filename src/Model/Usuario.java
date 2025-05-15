@@ -6,27 +6,26 @@ package Model;
 
 import java.util.Date;
 
-/**
- *
- * @author davic
- */
+
 public class Usuario{
     
     private String nome_empresa, email, senha, cnpj;
 
-    public Usuario(String email, String senha) {
+    public Usuario(String email, String senha) { //Construtor dos valores do login
         this.email = email;
         this.senha = senha;
     }
     
-    public void cadastrar(String nome_empresa, String email, String senha, String cnpj){
+    public void cadastrar(String nome_empresa, String email, String senha, String cnpj){ //Construtor dos valores do cadastro
         this.nome_empresa = nome_empresa;
         this.email = email;
         this.senha = senha;
         this.cnpj = cnpj;
     
     }
-
+        
+    //Getters e Setters dos valores
+    
     public String getNome_empresa() {
         return nome_empresa;
     }

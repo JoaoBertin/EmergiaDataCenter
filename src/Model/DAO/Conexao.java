@@ -6,19 +6,16 @@ package Model.DAO;
 
 import java.sql.*;
 
-/**
- *
- * @author hide
- */
+
 public class Conexao {
     
     
     public Connection getConnection() throws SQLException{
-        String url = "jdbc:sqlite:aps.db";
+        String url = "jdbc:sqlite:aps.db"; //Url do banco de dados
         Connection conexao = null;
         
         try{
-            conexao = DriverManager.getConnection(url);
+            conexao = DriverManager.getConnection(url); //Conexão do Netbeans com o banco de dados e caso ele não conseguir conectar ele dara uma mensagem de erro
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }

@@ -4,10 +4,7 @@
  */
 package View;
 
-/**
- *
- * @author davic
- */
+
 public class DispEnEletrica extends javax.swing.JFrame {
 
     /**

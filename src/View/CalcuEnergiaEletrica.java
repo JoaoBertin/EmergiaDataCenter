@@ -7,10 +7,7 @@ package View;
 import Calculo.EnergiaEletrica;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author davic
- */
+
 public class CalcuEnergiaEletrica extends javax.swing.JFrame {
 
     /**

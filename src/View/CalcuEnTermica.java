@@ -4,10 +4,7 @@
  */
 package View;
 
-/**
- *
- * @author davic
- */
+
 public class CalcuEnTermica extends javax.swing.JFrame {
 
     /**

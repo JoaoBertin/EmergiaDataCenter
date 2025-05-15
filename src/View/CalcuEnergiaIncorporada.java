@@ -5,10 +5,7 @@ package View;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-/**
- *
- * @author davic
- */
+
 public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
 
     /**

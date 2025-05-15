@@ -4,10 +4,7 @@
  */
 package View;
 
-/**
- *
- * @author davic
- */
+
 public class Consulta extends javax.swing.JFrame {
 
     /**

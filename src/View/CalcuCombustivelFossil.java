@@ -7,10 +7,7 @@ package View;
 import Calculo.EnergiaCombustivelFossil;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author davic
- */
+
 public class CalcuCombustivelFossil extends javax.swing.JFrame {
 
     /**

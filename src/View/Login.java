@@ -11,10 +11,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-/**
- *
- * @author davic
- */
+
 public class Login extends javax.swing.JFrame {
 
     /**
@@ -109,7 +106,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSenhaActionPerformed
 
     private void btnLogin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogin2ActionPerformed
-     
+        //Validação dos Campos
         if(txtEmail.getText().matches("") || txtSenha.getText().matches("")){
            JOptionPane.showMessageDialog(rootPane, "Preencha todos os campos");
         
@@ -130,7 +127,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogin2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Cadastro cadastro = new Cadastro();
+        Cadastro cadastro = new Cadastro(); //Redirecionamte para a tela de cadastro
         cadastro.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed

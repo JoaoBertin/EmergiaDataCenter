@@ -6,10 +6,7 @@ package View;
 
 import Controller.MenuPrincipalController;
 
-/**
- *
- * @author davic
- */
+
 public class MenuPrincipal extends javax.swing.JFrame {
 
     private final MenuPrincipalController controller;

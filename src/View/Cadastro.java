@@ -11,10 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTextField;
 
-/**
- *
- * @author davic
- */
+
 public class Cadastro extends javax.swing.JFrame {
 
     /**
