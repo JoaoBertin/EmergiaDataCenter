@@ -43,8 +43,8 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
-        jLabel2.setText("Cálculo de Energia Combústivel Fóssil\n");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, -1, -1));
+        jLabel2.setText("Cálculo de Emergia Combústivel Fóssil ");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, -1, -1));
 
         cboxCombustivel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         cboxCombustivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gás Natural", "Diesel", "hvo", " ", " ", " ", " " }));

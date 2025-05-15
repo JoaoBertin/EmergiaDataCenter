@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class CalcuEnergiaEletrica extends javax.swing.JFrame {
        private List<EnergiaEletrica> listaEnergiaEletrica = new ArrayList<EnergiaEletrica>();
-       private double emergiaTotalAcumulada = 0;
+       private double emergiaTotalAcumuladaEletrica = 0;
     /**
      * Creates new form Consulta
      */
@@ -105,8 +105,8 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         getContentPane().add(lblqtdDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, -1, -1));
 
         lblTitulo.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
-        lblTitulo.setText("Cálculo do Consumo de Energia Elétrica");
-        getContentPane().add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+        lblTitulo.setText("Cálculo de Emergia Elétrica");
+        getContentPane().add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
 
         lblQuadroBranco.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblQuadroBranco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Painel Branco.jpg"))); // NOI18N
@@ -158,14 +158,14 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         
      
         double resultadoTotal = 0;
-        for (int i = 0; i < quantidade; i++){
+        for (int i = 0; i < 10; i++){
         EnergiaEletrica energia = new EnergiaEletrica( tipoDispositivo ,potencia, horas, dias);
         listaEnergiaEletrica.add(energia);
         resultadoTotal += energia.calcularEmergiaTotal();
         }
-        emergiaTotalAcumulada += resultadoTotal; 
+        emergiaTotalAcumuladaEletrica += resultadoTotal; 
         txtResultado.setText(String.format("Emergia Dispositivo: %.2e seJ", resultadoTotal));
-        txtResultadoTotal.setText(String.format("Emergia Total: %.2e seJ", emergiaTotalAcumulada));;
+        txtResultadoTotal.setText(String.format("Emergia Total: %.2e seJ", emergiaTotalAcumuladaEletrica));;
         JOptionPane.showMessageDialog(this, "Dispositivo(s) adicionados com sucesso!");
 
     } catch (NumberFormatException ex) {

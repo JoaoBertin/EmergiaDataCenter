@@ -4,78 +4,105 @@
  */
 package Calculo;
 
-
 public class EnergiaIncorporadaMateriais {
-     private double massa;
+    private double massa; // em kg
     private String tipoMaterial;
-    private double transformidade;
+    private double energiaEspecifica; // em MJ/kg
+    private double transformidade; // seJ/MJ
 
     public EnergiaIncorporadaMateriais(double massa, String tipoMaterial) {
         this.massa = massa;
-        this.tipoMaterial = tipoMaterial.toLowerCase();
-        definirTransformidade();
-    }
+        this.tipoMaterial = tipoMaterial;
 
-    private void definirTransformidade() {
         switch (tipoMaterial) {
-            case "concreto armado":
+            case "Concreto Armado":
+                energiaEspecifica = 1.69;
                 transformidade = 2.5e9;
                 break;
-            case "aço estrutural":
-            case "aço laminado":
+            case "Aço Estrutural":
+                energiaEspecifica = 30.0;
                 transformidade = 1.2e10;
                 break;
-            case "alumínio":
+            case "Aço Laminado":
+                energiaEspecifica = 30.0;
+                transformidade = 1.2e10;
+                break;
+            case "Alumínio":
+                energiaEspecifica = 192.0;
                 transformidade = 2.0e10;
                 break;
-            case "cobre":
+            case "Cobre":
+                energiaEspecifica = 42.0;
                 transformidade = 1.8e10;
                 break;
-            case "plásticos":
-            case "pvc":
-            case "pe":
-            case "pu":
+            case "Plástico":
+                energiaEspecifica = 85.0;
                 transformidade = 8.0e9;
                 break;
-            case "silício":
+            case "Silício":
+                energiaEspecifica = 1200.0; // média entre 1000 e 1500 MJ/kg
                 transformidade = 3.0e11;
                 break;
-            case "fibra de vidro":
-            case "resina":
-            case "fr4":
+            case "Fibra de Vidro":
+                energiaEspecifica = 28.0;
                 transformidade = 6.5e9;
                 break;
-            case "vidro temperado":
+            case "Resina":
+                energiaEspecifica = 90.0; // valor médio para poliéster/epóxi
+                transformidade = 6.5e9;
+                break;
+            case "Vidro Temperado":
+                energiaEspecifica = 15.0;
                 transformidade = 4.2e9;
                 break;
-            case "isolamento térmico":
+            case "Isolamento Térmico":
+                energiaEspecifica = 28.0; // lã de vidro como referência
                 transformidade = 5.0e9;
                 break;
-            case "fluidos refrigerantes":
-            case "água tratada":
+            case "Água Tratada":
+                energiaEspecifica = 0.02; // 0.02 MJ/kg (≈20 MJ/m³)
                 transformidade = 1.0e8;
                 break;
             default:
+                energiaEspecifica = 0;
                 transformidade = 0;
                 break;
         }
     }
 
-    public double calcularEmergiaIncorporada() {
-        return massa * transformidade;
+    // Cálculo da energia incorporada (MJ)
+    public double calcularEnergiaIncorporada() {
+        return massa * energiaEspecifica;
     }
 
+    // Cálculo da emergia incorporada (seJ)
+    public double calcularEmergiaIncorporada() {
+        return calcularEnergiaIncorporada() * transformidade;
+    }
+
+    // Getters e Setters
     public double getMassa() {
         return massa;
+    }
+
+    public void setMassa(double massa) {
+        this.massa = massa;
     }
 
     public String getTipoMaterial() {
         return tipoMaterial;
     }
 
+    public void setTipoMaterial(String tipoMaterial) {
+        this.tipoMaterial = tipoMaterial;
+        // Recalcula se necessário
+    }
+
+    public double getEnergiaEspecifica() {
+        return energiaEspecifica;
+    }
+
     public double getTransformidade() {
         return transformidade;
     }
 }
-
-

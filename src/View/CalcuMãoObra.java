@@ -15,8 +15,8 @@ public class CalcuMãoObra extends javax.swing.JFrame {
      * 
      *
 */  private List<EnergiaMaoDeObra> listaMaoDeObra = new ArrayList<EnergiaMaoDeObra>();
+    double emergiaTotalAcomuladaMãoObra;
     public CalcuMãoObra() {
-        
         initComponents();
     }
 
@@ -55,8 +55,8 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         getContentPane().add(cboxMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
-        jLabel2.setText("Calculo de Consumo de Energia de mão de Obra");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, -1, 40));
+        jLabel2.setText("Calculo de Emergia de Mão de Obra");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, -1, 40));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel4.setText("N° de Trabalhadores:");
@@ -80,10 +80,10 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         getContentPane().add(txtTrabalhadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 330, 100, 30));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, 160, -1));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 490, 250, -1));
 
         txtResultadoTotal.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 490, 160, 30));
+        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 250, 30));
 
         btnEnMaoObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEnMaoObra.setText("Confirmar Energia ");
@@ -132,12 +132,17 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         int horasPorDia = Integer.parseInt(txtHrsDia.getText());
         int diasOperacao = Integer.parseInt(txtDiasOp.getText());
         int numTrabalhadores = Integer.parseInt(txtTrabalhadores.getText());
+        
+        double resultadoTotalMaodeObra = 0;
+        for (int i = 0; i < 4; i++){
+        EnergiaMaoDeObra maoObra = new EnergiaMaoDeObra(trabalho, numTrabalhadores, horasPorDia, diasOperacao);
+        listaMaoDeObra.add(maoObra);
+        resultadoTotalMaodeObra += maoObra.calcularEmergiaTotal();
+        }
+        emergiaTotalAcomuladaMãoObra += resultadoTotalMaodeObra; 
 
-        EnergiaMaoDeObra maoObra = new EnergiaMaoDeObra(trabalho, numTrabalhadores, horasPorDia, diasOperacao, 1.2);
-
-        double emergiaTotal = maoObra.calcularEmergiaTotal();
-
-        txtResultado.setText(String.format("%.2e sej", emergiaTotal));
+        txtResultado.setText(String.format("Emergia Dispositivo: %.2e sej", resultadoTotalMaodeObra));
+        txtResultadoTotal.setText(String.format("Emergia Total: %.2e sej", emergiaTotalAcomuladaMãoObra));
         
     } catch (NumberFormatException ex) {
         JOptionPane.showMessageDialog(this, "Insira apenas números válidos nos campos.");

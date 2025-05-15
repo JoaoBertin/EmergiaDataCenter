@@ -14,7 +14,7 @@ public class EnergiaMaoDeObra {
     private double energiaMediaHora = 1.2; // em MJ/h
     private final double transformidade = 3.12e6; // Transformidade pré-definida em sej (exemplo)
 
-    public EnergiaMaoDeObra(String trabalho, int numeroTrabalhadores, int horasTrabalhadas, int diasTrabalhados, double par) {
+    public EnergiaMaoDeObra(String trabalho, int numeroTrabalhadores, int horasTrabalhadas, int diasTrabalhados) {
         this.trabalho = trabalho;
         this.numeroTrabalhadores = numeroTrabalhadores;
         this.horasTrabalhadas = horasTrabalhadas;

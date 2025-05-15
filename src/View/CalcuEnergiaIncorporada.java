@@ -1,5 +1,9 @@
 package View;
 
+import Calculo.EnergiaIncorporadaMateriais;
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,7 +11,8 @@ package View;
 
 
 public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
-
+    private List<EnergiaIncorporadaMateriais> listaEnergiaMateriais = new ArrayList<EnergiaIncorporadaMateriais>();
+    double emergiaTotalAcumulada = 0;
     /**
      * Creates new form CalcuEnergiaIncorporada
      */
@@ -26,11 +31,11 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
 
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cboxMateriais = new javax.swing.JComboBox<>();
         txtMassa = new javax.swing.JTextField();
         txtResultado = new javax.swing.JTextField();
         txtResultadoGeral = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnMateriais = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -38,34 +43,34 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
-        jLabel4.setText("Calculo Energia Incorporada dos Materiais");
+        jLabel4.setText("Calculo Emergia Incorporada dos Materiais");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setText("Massa:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, -1, -1));
 
-        jComboBox1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Concreto Armado", "Aço Estrutural", "Aço Luminado", "\t", " " }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
+        cboxMateriais.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        cboxMateriais.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Concreto Armado", "Aço Estrutural", "Aço Luminado", "Alumínio", "Cobre", "Plástico", "Silício", "Fibra de Vidro", "Resina", "Vidro Temperado", "Isolamento Térmico", "Aguá Tratada", " ", " " }));
+        getContentPane().add(cboxMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
 
         txtMassa.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         getContentPane().add(txtMassa, new org.netbeans.lib.awtextra.AbsoluteConstraints(824, 410, 100, -1));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 520, 140, -1));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 260, -1));
 
         txtResultadoGeral.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultadoGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, 140, -1));
+        getContentPane().add(txtResultadoGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 570, 260, -1));
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton1.setText("Calcular Energia\n");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnMateriais.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnMateriais.setText("Calcular Emergia ");
+        btnMateriais.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnMateriaisActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 580, -1, -1));
+        getContentPane().add(btnMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 540, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 880, 460));
@@ -77,11 +82,12 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnMateriaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMateriaisActionPerformed
         // TODO add your handling code here:
         
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+        
+    }//GEN-LAST:event_btnMateriaisActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,8 +125,8 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton btnMateriais;
+    private javax.swing.JComboBox<String> cboxMateriais;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

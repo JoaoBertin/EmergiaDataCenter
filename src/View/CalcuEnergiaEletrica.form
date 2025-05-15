@@ -237,11 +237,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="36" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="C&#xe1;lculo do Consumo de Energia El&#xe9;trica"/>
+        <Property name="text" type="java.lang.String" value="C&#xe1;lculo de Emergia El&#xe9;trica"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="200" y="250" width="-1" height="-1"/>
+          <AbsoluteConstraints x="300" y="250" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

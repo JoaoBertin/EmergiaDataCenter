@@ -85,11 +85,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="36" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Calculo de Consumo de Energia de m&#xe3;o de Obra"/>
+        <Property name="text" type="java.lang.String" value="Calculo de Emergia de M&#xe3;o de Obra"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="140" y="190" width="-1" height="40"/>
+          <AbsoluteConstraints x="260" y="200" width="-1" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -176,7 +176,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="260" y="490" width="160" height="-1"/>
+          <AbsoluteConstraints x="110" y="490" width="250" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -188,7 +188,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="490" width="160" height="30"/>
+          <AbsoluteConstraints x="110" y="560" width="250" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
