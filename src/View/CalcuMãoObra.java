@@ -5,14 +5,18 @@
 package View;
 
 import Calculo.EnergiaMaoDeObra;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 
 public class CalcuMãoObra extends javax.swing.JFrame {
     /**
-
-*/
+     * 
+     *
+*/  private List<EnergiaMaoDeObra> listaMaoDeObra = new ArrayList<EnergiaMaoDeObra>();
     public CalcuMãoObra() {
+        
         initComponents();
     }
 
@@ -124,11 +128,12 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     private void btnEnMaoObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnMaoObraActionPerformed
         try {
         
+        String trabalho = cboxMãodeObra.getSelectedItem().toString();
         int horasPorDia = Integer.parseInt(txtHrsDia.getText());
         int diasOperacao = Integer.parseInt(txtDiasOp.getText());
         int numTrabalhadores = Integer.parseInt(txtTrabalhadores.getText());
 
-        EnergiaMaoDeObra maoObra = new EnergiaMaoDeObra(numTrabalhadores, horasPorDia, diasOperacao, 1.2);
+        EnergiaMaoDeObra maoObra = new EnergiaMaoDeObra(trabalho, numTrabalhadores, horasPorDia, diasOperacao, 1.2);
 
         double emergiaTotal = maoObra.calcularEmergiaTotal();
 

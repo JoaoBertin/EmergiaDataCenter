@@ -5,11 +5,14 @@
 package View;
 
 import Calculo.EnergiaEletrica;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 
 public class CalcuEnergiaEletrica extends javax.swing.JFrame {
-
+       private List<EnergiaEletrica> listaEnergiaEletrica = new ArrayList<EnergiaEletrica>();
+       private double emergiaTotalAcumulada = 0;
     /**
      * Creates new form Consulta
      */
@@ -27,13 +30,13 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
     private void initComponents() {
 
         lblDias = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cboxDisp = new javax.swing.JComboBox<>();
         txtQtdDispositivo = new javax.swing.JTextField();
         txtPtDispositivo = new javax.swing.JTextField();
         txtHrsUso = new javax.swing.JTextField();
         txtDias = new javax.swing.JTextField();
         txtResultado = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        txtResultadoTotal = new javax.swing.JTextField();
         btnAd = new javax.swing.JButton();
         lblPtDispositivo = new javax.swing.JLabel();
         lblHrsUso = new javax.swing.JLabel();
@@ -53,9 +56,9 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         lblDias.setText("Quantos dias operados no mês:");
         getContentPane().add(lblDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, -1, -1));
 
-        jComboBox1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Servidores", "Switches", "Roteadores", "Firewalls", "Access Points (APs) ", "Fontes de Alimentação (UPS)", "Sistema de Monitoramento", "Ar condicionado", "Sistema de Resfriamento Líquido", "Sistema Incêndio", " ", " ", " ", " ", " " }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, -1, -1));
+        cboxDisp.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        cboxDisp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Servidores", "Switches", "Roteadores", "Firewalls", "Access Points (APs) ", "Fontes de Alimentação (UPS)", "Sistema de Monitoramento", "Ar condicionado", "Sistema de Resfriamento Líquido", "Sistema Incêndio", " ", " ", " ", " ", " " }));
+        getContentPane().add(cboxDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, -1, -1));
 
         txtQtdDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         getContentPane().add(txtQtdDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 350, 150, -1));
@@ -75,8 +78,10 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         getContentPane().add(txtDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 470, 150, 30));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 510, 240, -1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 510, 240, 30));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 510, 330, -1));
+
+        txtResultadoTotal.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 570, 330, 30));
 
         btnAd.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnAd.setText("Confirmar Dispositivo");
@@ -85,7 +90,7 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
                 btnAdActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAd, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, -1, -1));
+        getContentPane().add(btnAd, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 540, -1, -1));
 
         lblPtDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblPtDispositivo.setText("Potência de cada dispositivo:");
@@ -143,15 +148,25 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
     private void btnAdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdActionPerformed
                     // TODO add your handling code here:
       try {
+       
+        String tipoDispositivo = cboxDisp.getSelectedItem().toString();
         int quantidade = Integer.parseInt(txtQtdDispositivo.getText());
         double potencia = Double.parseDouble(txtPtDispositivo.getText());
         double horas = Double.parseDouble(txtHrsUso.getText());
         int dias = Integer.parseInt(txtDias.getText());
-
-        EnergiaEletrica energia = new EnergiaEletrica(potencia, horas, dias);
-
-        double resultado = energia.calcularEmergiaTotal();
-        txtResultado.setText(String.format("Emergia Total: %.2e seJ", resultado));
+        
+        
+     
+        double resultadoTotal = 0;
+        for (int i = 0; i < quantidade; i++){
+        EnergiaEletrica energia = new EnergiaEletrica( tipoDispositivo ,potencia, horas, dias);
+        listaEnergiaEletrica.add(energia);
+        resultadoTotal += energia.calcularEmergiaTotal();
+        }
+        emergiaTotalAcumulada += resultadoTotal; 
+        txtResultado.setText(String.format("Emergia Dispositivo: %.2e seJ", resultadoTotal));
+        txtResultadoTotal.setText(String.format("Emergia Total: %.2e seJ", emergiaTotalAcumulada));;
+        JOptionPane.showMessageDialog(this, "Dispositivo(s) adicionados com sucesso!");
 
     } catch (NumberFormatException ex) {
         JOptionPane.showMessageDialog(this, "Por favor, insira valores numéricos válidos.");
@@ -212,12 +227,11 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAd;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> cboxDisp;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblDias;
     private javax.swing.JLabel lblHrsUso;
     private javax.swing.JLabel lblPlanoFundo;
@@ -230,5 +244,6 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
     private javax.swing.JTextField txtPtDispositivo;
     private javax.swing.JTextField txtQtdDispositivo;
     private javax.swing.JTextField txtResultado;
+    private javax.swing.JTextField txtResultadoTotal;
     // End of variables declaration//GEN-END:variables
 }

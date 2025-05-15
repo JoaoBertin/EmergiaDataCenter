@@ -4,21 +4,42 @@
  */
 package Calculo;
 
+import javax.swing.JOptionPane;
+
 public class EnergiaMaoDeObra {
+    private String trabalho;
     private int numeroTrabalhadores;
     private int horasTrabalhadas;
     private int diasTrabalhados;
     private double energiaMediaHora = 1.2; // em MJ/h
     private final double transformidade = 3.12e6; // Transformidade pré-definida em sej (exemplo)
 
-    public EnergiaMaoDeObra(int numeroTrabalhadores, int horasTrabalhadas, int diasTrabalhados, double energiaMediaHora) {
+    public EnergiaMaoDeObra(String trabalho, int numeroTrabalhadores, int horasTrabalhadas, int diasTrabalhados, double par) {
+        this.trabalho = trabalho;
         this.numeroTrabalhadores = numeroTrabalhadores;
         this.horasTrabalhadas = horasTrabalhadas;
         this.diasTrabalhados = diasTrabalhados;
-        this.energiaMediaHora = energiaMediaHora;
-        
-        
+          switch (trabalho){
+               case "Técnico em Redes":
+                this.energiaMediaHora = 16_200_000;
+                break;
+            case "Técnico de TI":
+                this.energiaMediaHora = 54_000_000;
+                break;
+            case "Eng. Elétrico / Téc. Eletrotécnico":
+                this.energiaMediaHora = 12_600_000;
+                break;
+            case "Analista de Cibersegurança":
+                this.energiaMediaHora = 41_400_000;
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Profissão inválida! Transformidade será 0.");
+                this.energiaMediaHora = 0;
+                break;
+          }
     }
+
+    
     
 
     public int getNumeroTrabalhadores() {
