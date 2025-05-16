@@ -3,6 +3,7 @@ package View;
 import Calculo.EnergiaIncorporadaMateriais;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
     private List<EnergiaIncorporadaMateriais> listaEnergiaMateriais = new ArrayList<EnergiaIncorporadaMateriais>();
-    double emergiaTotalAcumulada = 0;
+    double emergiaTotalAcumuladaMateriais = 0;
     /**
      * Creates new form CalcuEnergiaIncorporada
      */
@@ -84,7 +85,32 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
 
     private void btnMateriaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMateriaisActionPerformed
         // TODO add your handling code here:
-        
+        try {
+    String tipoMaterial = cboxMateriais.getSelectedItem().toString();
+    double massa = Double.parseDouble(txtMassa.getText());
+
+    double resultado = 0;
+    for (int i = 0; i < 12; i++) {
+        EnergiaIncorporadaMateriais energiaM = new EnergiaIncorporadaMateriais(massa, tipoMaterial);
+        listaEnergiaMateriais.add(energiaM);
+        resultado += energiaM.calcularEmergiaIncorporada();
+    }
+
+    emergiaTotalAcumuladaMateriais += resultado;
+
+    txtResultado.setText(String.format("Emergia Material: %.2e seJ", resultado));
+    txtResultadoGeral.setText(String.format("Emergia Total: %.2e seJ", emergiaTotalAcumuladaMateriais));
+    JOptionPane.showMessageDialog(this, "Material Registrado com sucesso!");
+
+    // Limpar campo de entrada
+    txtMassa.setText("");
+
+} catch (NumberFormatException ex) {
+    JOptionPane.showMessageDialog(this, "Insira um valor numérico válido para a massa.");
+} catch (Exception ex) {
+    JOptionPane.showMessageDialog(this, "Erro inesperado: " + ex.getMessage());
+}
+
         
         
     }//GEN-LAST:event_btnMateriaisActionPerformed
