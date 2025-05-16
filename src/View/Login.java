@@ -9,6 +9,7 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 
@@ -34,7 +35,7 @@ public class Login extends javax.swing.JFrame {
         lblEmail = new javax.swing.JLabel();
         lblSenha = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
-        txtSenha = new javax.swing.JTextField();
+        txtSenha = new javax.swing.JPasswordField();
         btnLogin2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         lblFundo = new javax.swing.JLabel();
@@ -64,14 +65,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, 300, -1));
-
-        txtSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        txtSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSenhaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 420, 300, -1));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 420, 300, 40));
 
         btnLogin2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnLogin2.setText("ENTRAR");
@@ -100,10 +94,6 @@ public class Login extends javax.swing.JFrame {
     private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailActionPerformed
-
-    private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSenhaActionPerformed
 
     private void btnLogin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogin2ActionPerformed
         //Validação dos Campos
@@ -149,7 +139,7 @@ public class Login extends javax.swing.JFrame {
     }
 
     public void setTxtSenha(JTextField txtSenha) {
-        this.txtSenha = txtSenha;
+        this.txtSenha = (JPasswordField) txtSenha;
     }
 
     
@@ -196,6 +186,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel lblFundo;
     private javax.swing.JLabel lblSenha;
     private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtSenha;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }

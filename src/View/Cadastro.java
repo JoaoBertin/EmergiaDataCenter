@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 
@@ -31,16 +32,15 @@ public class Cadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        txtSenha = new javax.swing.JPasswordField();
         lblLogin = new javax.swing.JLabel();
         lblCNPJ = new javax.swing.JLabel();
         lblEmpresa = new javax.swing.JLabel();
         txtEmpresa = new javax.swing.JTextField();
         txtCNPJ = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
-        txtSenha = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
         btnRegistro = new javax.swing.JButton();
-        jScrollBar1 = new javax.swing.JScrollBar();
         lblEmail = new javax.swing.JLabel();
         lblSenha = new javax.swing.JLabel();
         lblFundoLogin = new javax.swing.JLabel();
@@ -48,6 +48,7 @@ public class Cadastro extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 620, 360, 30));
 
         lblLogin.setFont(new java.awt.Font("Arial", 0, 40)); // NOI18N
         lblLogin.setForeground(new java.awt.Color(255, 255, 255));
@@ -83,9 +84,6 @@ public class Cadastro extends javax.swing.JFrame {
         });
         getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 540, 360, -1));
 
-        txtSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 610, 360, -1));
-
         btnLogin.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnLogin.setText("Ja tem conta? Faça login por aqui.");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +101,6 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 700, -1, -1));
-        getContentPane().add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 10, 10, 1030));
 
         lblEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(255, 255, 255));
@@ -192,7 +189,7 @@ public class Cadastro extends javax.swing.JFrame {
     }
 
     public void setTxtSenha(JTextField txtSenha) {
-        this.txtSenha = txtSenha;
+        this.txtSenha = (JPasswordField) txtSenha;
     }
 
     
@@ -237,7 +234,6 @@ public class Cadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnRegistro;
-    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JLabel lblCNPJ;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblEmpresa;
@@ -247,6 +243,6 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JTextField txtCNPJ;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtEmpresa;
-    private javax.swing.JTextField txtSenha;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }
