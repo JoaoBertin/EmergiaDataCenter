@@ -42,6 +42,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         txtResultado = new javax.swing.JTextField();
         txtResultadoTotal = new javax.swing.JTextField();
         btnEnMaoObra = new javax.swing.JButton();
+        btnNextElétrica = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         lblParede = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -95,6 +96,10 @@ public class CalcuMãoObra extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEnMaoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 530, -1, -1));
+
+        btnNextElétrica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnNextElétrica.setText("Próxima Emergia ");
+        getContentPane().add(btnNextElétrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 600, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 890, 460));
@@ -198,6 +203,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEnMaoObra;
+    private javax.swing.JButton btnNextElétrica;
     private javax.swing.JComboBox<String> cboxMãodeObra;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

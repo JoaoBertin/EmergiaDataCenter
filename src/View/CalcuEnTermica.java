@@ -31,6 +31,7 @@ public class CalcuEnTermica extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        btnNextCombus = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -69,6 +70,10 @@ public class CalcuEnTermica extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton1.setText("Confirmar Energia");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 540, -1, -1));
+
+        btnNextCombus.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnNextCombus.setText("Próxima Emergia ");
+        getContentPane().add(btnNextCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 650, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -148,6 +153,7 @@ public class CalcuEnTermica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnNextCombus;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

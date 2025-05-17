@@ -38,6 +38,7 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
         txtResultado = new javax.swing.JTextField();
         txtResultadoGeral = new javax.swing.JTextField();
         btnMateriais = new javax.swing.JButton();
+        btnNextMãodeObra = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -73,6 +74,10 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 540, -1, -1));
+
+        btnNextMãodeObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnNextMãodeObra.setText("Próxima Energia ");
+        getContentPane().add(btnNextMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 610, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 880, 460));
@@ -154,6 +159,7 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnMateriais;
+    private javax.swing.JButton btnNextMãodeObra;
     private javax.swing.JComboBox<String> cboxMateriais;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

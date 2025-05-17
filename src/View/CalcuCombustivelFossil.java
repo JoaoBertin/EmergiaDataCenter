@@ -57,7 +57,7 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         getContentPane().add(cboxCombustivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel3.setText("Volume: ");
+        jLabel3.setText("Volume: L");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, -1, -1));
 
         txtVolume.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N

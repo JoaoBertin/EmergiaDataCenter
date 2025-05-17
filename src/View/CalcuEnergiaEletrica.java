@@ -39,6 +39,7 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         txtResultado = new javax.swing.JTextField();
         txtResultadoTotal = new javax.swing.JTextField();
         btnAd = new javax.swing.JButton();
+        btnNextTermica = new javax.swing.JButton();
         lblPtDispositivo = new javax.swing.JLabel();
         lblHrsUso = new javax.swing.JLabel();
         lblqtdDispositivo = new javax.swing.JLabel();
@@ -93,12 +94,16 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         });
         getContentPane().add(btnAd, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 540, -1, -1));
 
+        btnNextTermica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnNextTermica.setText("Próxima Emergia ");
+        getContentPane().add(btnNextTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, -1));
+
         lblPtDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblPtDispositivo.setText("Potência de cada dispositivo:");
+        lblPtDispositivo.setText("Potência de cada dispositivo: KWH");
         getContentPane().add(lblPtDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, -1, -1));
 
         lblHrsUso.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblHrsUso.setText("Tempo médio em horas do dispositivo em uso:");
+        lblHrsUso.setText("Tempo médio em horas do dispositivo em uso: p\\dia");
         getContentPane().add(lblHrsUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, -1, -1));
 
         lblqtdDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -229,6 +234,7 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAd;
+    private javax.swing.JButton btnNextTermica;
     private javax.swing.JComboBox<String> cboxDisp;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
