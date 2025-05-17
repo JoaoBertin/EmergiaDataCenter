@@ -5,6 +5,7 @@
 package View;
 
 import Calculo.EnergiaEletrica;
+import ValorGrafico.DadosEmergia;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -113,8 +114,8 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         lblQuadroBranco.setText("jLabel3");
         getContentPane().add(lblQuadroBranco, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 890, 410));
 
-        lblPlanoFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
-        getContentPane().add(lblPlanoFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1200, 1120));
+        lblPlanoFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
+        getContentPane().add(lblPlanoFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 1640, 1170));
 
         jMenu1.setText("Energias");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -166,6 +167,7 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         emergiaTotalAcumuladaEletrica += resultadoTotal; 
         txtResultado.setText(String.format("Emergia Dispositivo: %.2e seJ", resultadoTotal));
         txtResultadoTotal.setText(String.format("Emergia Total: %.2e seJ", emergiaTotalAcumuladaEletrica));;
+        DadosEmergia.eletrica = emergiaTotalAcumuladaEletrica; 
         JOptionPane.showMessageDialog(this, "Dispositivo(s) adicionados com sucesso!");
 
     } catch (NumberFormatException ex) {

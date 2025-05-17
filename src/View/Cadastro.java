@@ -113,7 +113,7 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 580, -1, -1));
 
         lblFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
-        getContentPane().add(lblFundoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1200, 1020));
+        getContentPane().add(lblFundoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1710, 1030));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

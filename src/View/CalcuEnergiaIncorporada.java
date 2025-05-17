@@ -1,6 +1,7 @@
 package View;
 
 import Calculo.EnergiaIncorporadaMateriais;
+import ValorGrafico.DadosEmergia;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -77,8 +78,8 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 880, 460));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 1080, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,6 +101,7 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
 
     txtResultado.setText(String.format("Emergia Material: %.2e seJ", resultado));
     txtResultadoGeral.setText(String.format("Emergia Total: %.2e seJ", emergiaTotalAcumuladaMateriais));
+    DadosEmergia.materiais = emergiaTotalAcumuladaMateriais;
     JOptionPane.showMessageDialog(this, "Material Registrado com sucesso!");
 
     // Limpar campo de entrada

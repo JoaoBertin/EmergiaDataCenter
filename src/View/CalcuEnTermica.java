@@ -74,8 +74,8 @@ public class CalcuEnTermica extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 890, 390));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 1090));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, -1));
 
         jMenu1.setText("Energias");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {

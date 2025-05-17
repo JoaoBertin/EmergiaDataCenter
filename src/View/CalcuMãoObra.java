@@ -5,6 +5,7 @@
 package View;
 
 import Calculo.EnergiaMaoDeObra;
+import ValorGrafico.DadosEmergia;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -18,6 +19,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     double emergiaTotalAcomuladaMãoObra;
     public CalcuMãoObra() {
         initComponents();
+        
     }
 
     /**
@@ -41,7 +43,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         txtResultadoTotal = new javax.swing.JTextField();
         btnEnMaoObra = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblParede = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -97,8 +99,8 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 890, 460));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 1090));
+        lblParede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
+        getContentPane().add(lblParede, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 1090));
 
         jMenu1.setText("Energias ");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +145,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
 
         txtResultado.setText(String.format("Emergia Dispositivo: %.2e sej", resultadoTotalMaodeObra));
         txtResultadoTotal.setText(String.format("Emergia Total: %.2e sej", emergiaTotalAcomuladaMãoObra));
-        
+        DadosEmergia.maoDeObra = emergiaTotalAcomuladaMãoObra;
     } catch (NumberFormatException ex) {
         JOptionPane.showMessageDialog(this, "Insira apenas números válidos nos campos.");
     }// TODO add your handling code here:
@@ -197,7 +199,6 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEnMaoObra;
     private javax.swing.JComboBox<String> cboxMãodeObra;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -207,6 +208,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JLabel lblParede;
     private javax.swing.JTextField txtDiasOp;
     private javax.swing.JTextField txtHrsDia;
     private javax.swing.JTextField txtResultado;

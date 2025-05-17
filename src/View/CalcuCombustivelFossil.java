@@ -5,6 +5,7 @@
 package View;
 
 import Calculo.EnergiaCombustivelFossil;
+import ValorGrafico.DadosEmergia;
 import javax.swing.JOptionPane;
 
 
@@ -76,8 +77,8 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 900, 460));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Consulta.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1080, 1070));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -70, -1, 1160));
 
         jMenu1.setText("Energias");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +141,7 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         double emergia = combustivel.calcularEmergiaTotal();
 
         txtResultado.setText(String.format("%.2e sej", emergia));
-
+        DadosEmergia.combustivel = emergia;
     } catch (NumberFormatException ex) {
         JOptionPane.showMessageDialog(this, "Por favor, insira um número válido para o volume.");
     } catch (IllegalArgumentException ex) {
