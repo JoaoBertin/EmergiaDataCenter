@@ -5,50 +5,59 @@
 package Calculo;
 
 public class EnergiaTermica {
-    private double massa; // em kg
-    private double capacidadeCalorifica; // em J/kg°C
-    private double variacaoTemperatura; // em °C
-    private final double transformidade = 1.15; // Transformidade pré-definida em sej (exemplo)
 
-    public EnergiaTermica(double massa, double capacidadeCalorifica, double variacaoTemperatura) {
-        this.massa = massa;
-        this.capacidadeCalorifica = capacidadeCalorifica;
-        this.variacaoTemperatura = variacaoTemperatura;
+
+
+    private double potenciaTI = 0;        // kW - Equipamentos de TI
+    private double iluminacao;        // kW - Iluminação
+    private int numPessoas;           // Número de pessoas no ambiente
+    private double cargaTotalKW;      // Resultado da carga térmica total
+    private double PERDA_UPS = 0.05;     // 5% fixo de perda
+    private double POTENCIA_POR_PESSOA = 0.15; // 150W = 0.15kW
+    private double COP = 3.5;             // Coeficiente fixo
+    private double Tranformidade = 1.74e5; // seJ/J
+
+    // Construtor
+    public EnergiaTermica(double iluminacao, int numPessoas) {
+        this.iluminacao = iluminacao;
+        this.numPessoas = numPessoas;
+        this.cargaTotalKW = calcularCargaTermica();
     }
 
-    public double getMassa() {
-        return massa;
+    // Cálculo da carga térmica total
+    public double calcularCargaTermica() {
+        double cargaUPS = potenciaTI * PERDA_UPS;
+        double cargaPessoas = numPessoas * POTENCIA_POR_PESSOA;
+        return potenciaTI + iluminacao + cargaUPS + cargaPessoas;
     }
 
-    public void setMassa(double massa) {
-        this.massa = massa;
+    // Energia elétrica da refrigeração (kW)
+    public double calcularEnergiaRefrigeracaoKW() {
+        return cargaTotalKW / COP;
     }
 
-    public double getCapacidadeCalorifica() {
-        return capacidadeCalorifica;
+    // Conversão para Joules
+    public double calcularEnergiaRefrigeracaoJoules() {
+        return calcularEnergiaRefrigeracaoKW() * 3600;
     }
 
-    public void setCapacidadeCalorifica(double capacidadeCalorifica) {
-        this.capacidadeCalorifica = capacidadeCalorifica;
+    // Emergia térmica (seJ)
+    public double calcularEmergiaRefrigeracao() {
+        return calcularEnergiaRefrigeracaoJoules() * Tranformidade;
     }
 
-    public double getVariacaoTemperatura() {
-        return variacaoTemperatura;
+    // Getters
+    public double getCargaTotalKW() {
+        return cargaTotalKW;
     }
 
-    public void setVariacaoTemperatura(double variacaoTemperatura) {
-        this.variacaoTemperatura = variacaoTemperatura;
+    public double getCOP() {
+        return COP;
     }
 
-    public double calcularEmergiaTotal() {
-        // Energia em J * transformidade
-        double energiaDisponivel = massa * capacidadeCalorifica * variacaoTemperatura; // em J
-        return energiaDisponivel * transformidade; // aplicando a transformidade
-    }
-
-    // Calcular o FTF diretamente com a transformidade fornecida
-    public double calcularFTF() {
-        double energiaDisponivel = massa * capacidadeCalorifica * variacaoTemperatura;
-        return transformidade * energiaDisponivel; // FTF usando o valor de transformidade diretamente
+    public double getTransformidade() {
+        return Tranformidade;
     }
 }
+
+

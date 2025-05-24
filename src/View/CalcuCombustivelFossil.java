@@ -63,7 +63,9 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
 
         txtVolume.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         getContentPane().add(txtVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 370, 110, -1));
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, 110, 30));
+
+        txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 450, 180, 30));
 
         btnRegistroCombus.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnRegistroCombus.setText("Confirmar Valores");
@@ -72,7 +74,7 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
                 btnRegistroCombusActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistroCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, -1, -1));
+        getContentPane().add(btnRegistroCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 500, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
@@ -165,9 +167,7 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Consulta con = new Consulta();
-        con.setVisible(true);
-        this.setVisible(false);
+     
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed

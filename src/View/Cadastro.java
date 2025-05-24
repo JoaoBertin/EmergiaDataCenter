@@ -48,22 +48,22 @@ public class Cadastro extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 620, 360, 30));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 590, 360, 30));
 
         lblLogin.setFont(new java.awt.Font("Arial", 0, 40)); // NOI18N
         lblLogin.setForeground(new java.awt.Color(255, 255, 255));
         lblLogin.setText("CADASTRO DA EMPRESA ");
-        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, -1));
+        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
 
         lblCNPJ.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblCNPJ.setForeground(new java.awt.Color(255, 255, 255));
         lblCNPJ.setText("DIGITE O CNPJ DA EMPRESA:");
-        getContentPane().add(lblCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 440, -1, -1));
+        getContentPane().add(lblCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, -1, -1));
 
         lblEmpresa.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblEmpresa.setForeground(new java.awt.Color(255, 255, 255));
         lblEmpresa.setText("NOME DA EMPRESA:");
-        getContentPane().add(lblEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, -1, -1));
+        getContentPane().add(lblEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, -1, -1));
 
         txtEmpresa.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txtEmpresa.addActionListener(new java.awt.event.ActionListener() {
@@ -71,10 +71,10 @@ public class Cadastro extends javax.swing.JFrame {
                 txtEmpresaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 360, 30));
+        getContentPane().add(txtEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 380, 360, 30));
 
         txtCNPJ.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        getContentPane().add(txtCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, 360, -1));
+        getContentPane().add(txtCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, 360, -1));
 
         txtEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +82,7 @@ public class Cadastro extends javax.swing.JFrame {
                 txtEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 540, 360, -1));
+        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, 360, -1));
 
         btnLogin.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnLogin.setText("Ja tem conta? Faça login por aqui.");
@@ -91,7 +91,7 @@ public class Cadastro extends javax.swing.JFrame {
                 btnLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 750, -1, -1));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 690, -1, -1));
 
         btnRegistro.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnRegistro.setText("REGISTRAR-SE");
@@ -100,17 +100,17 @@ public class Cadastro extends javax.swing.JFrame {
                 btnRegistroActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 700, -1, -1));
+        getContentPane().add(btnRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 640, -1, -1));
 
         lblEmail.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(255, 255, 255));
         lblEmail.setText("DIGITE SEU EMAIL:");
-        getContentPane().add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, -1, 20));
+        getContentPane().add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 490, -1, 20));
 
         lblSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lblSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblSenha.setText("DIGITE SUA SENHA :");
-        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 580, -1, -1));
+        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 560, -1, -1));
 
         lblFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(lblFundoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1710, 1030));

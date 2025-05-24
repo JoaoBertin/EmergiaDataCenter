@@ -110,7 +110,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 890, 460));
 
         lblParede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
-        getContentPane().add(lblParede, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 1090));
+        getContentPane().add(lblParede, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, -1, 1090));
 
         jMenu1.setText("Energias ");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -166,9 +166,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Consulta con = new Consulta();
-        con.setVisible(true);
-        this.setVisible(false);
+    
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnNextElétricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextElétricaActionPerformed

@@ -4,6 +4,10 @@
  */
 package View;
 
+import Calculo.EnergiaTermica;
+import ValorGrafico.DadosEmergia;
+import javax.swing.JOptionPane;
+
 
 public class CalcuEnTermica extends javax.swing.JFrame {
 
@@ -26,11 +30,10 @@ public class CalcuEnTermica extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtIluminacao = new javax.swing.JTextField();
+        txtNumPessoas = new javax.swing.JTextField();
+        txtResultado = new javax.swing.JTextField();
+        btnEnTermica = new javax.swing.JButton();
         btnNextCombus = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -47,37 +50,37 @@ public class CalcuEnTermica extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel4.setText("Massa:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, -1));
+        jLabel4.setText("Iluminação DataCenter: Kw");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel5.setText("Capacidade Calorífica:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, -1, -1));
+        jLabel5.setText("Trabalhadores Atuando no Data Center: N°");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 420, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel6.setText("Variação de Temperatura:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 460, -1, -1));
+        txtIluminacao.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtIluminacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 390, 130, -1));
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 390, 130, -1));
+        txtNumPessoas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtNumPessoas, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 430, 130, -1));
 
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 470, 130, -1));
+        txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 560, 160, -1));
 
-        jTextField3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 430, 130, -1));
-
-        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton1.setText("Confirmar Energia");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 540, -1, -1));
+        btnEnTermica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnEnTermica.setText("Calcular Emergia");
+        btnEnTermica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnTermicaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEnTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 610, -1, -1));
 
         btnNextCombus.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnNextCombus.setText("Próxima Emergia ");
-        getContentPane().add(btnNextCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 650, -1, -1));
+        getContentPane().add(btnNextCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 660, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 890, 390));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 960, 390));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, -1));
@@ -112,10 +115,28 @@ public class CalcuEnTermica extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Consulta con = new Consulta();
-        con.setVisible(true);
-        this.setVisible(false);
+     
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void btnEnTermicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnTermicaActionPerformed
+        try {
+        double iluminacao = Double.parseDouble(txtIluminacao.getText());
+        int pessoas = Integer.parseInt(txtNumPessoas.getText());
+
+        EnergiaTermica calculo = new EnergiaTermica(iluminacao, pessoas);
+        double emergia = calculo.calcularEmergiaRefrigeracao();
+
+        txtResultado.setText(String.format("Emergia Total: %.2e seJ", emergia));
+        DadosEmergia.entermica = emergia;
+
+        JOptionPane.showMessageDialog(this, "Emergia térmica registrada com sucesso!");
+        txtIluminacao.setText("");
+        txtNumPessoas.setText("");
+
+    } catch (NumberFormatException ex) {
+        JOptionPane.showMessageDialog(this, "Insira valores numéricos válidos.");
+    }
+    }//GEN-LAST:event_btnEnTermicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,20 +174,19 @@ public class CalcuEnTermica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEnTermica;
     private javax.swing.JButton btnNextCombus;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField txtIluminacao;
+    private javax.swing.JTextField txtNumPessoas;
+    private javax.swing.JTextField txtResultado;
     // End of variables declaration//GEN-END:variables
 }

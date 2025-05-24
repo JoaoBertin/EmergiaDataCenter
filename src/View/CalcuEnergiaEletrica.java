@@ -191,9 +191,7 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        Consulta con = new Consulta();
-        con.setVisible(true);
-        this.setVisible(false);
+      
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnNextTermicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextTermicaActionPerformed

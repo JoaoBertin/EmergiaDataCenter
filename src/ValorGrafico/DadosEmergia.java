@@ -13,5 +13,5 @@ public class DadosEmergia {
     public static double eletrica = 0;
     public static double combustivel = 0;
     public static double maoDeObra = 0;
-    
+    public static double entermica = 0;
 }
