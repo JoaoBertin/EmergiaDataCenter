@@ -31,9 +31,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         lblTexto = new javax.swing.JLabel();
         lblFundo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        mnCadastro = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
         mnOperação = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         mnRel = new javax.swing.JMenu();
@@ -51,22 +48,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         lblFundo.setText("lblPlasn");
         getContentPane().add(lblFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1630, -1));
-
-        mnCadastro.setText("Cadastro");
-        mnCadastro.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
-        jMenuItem1.setText("Empresa");
-        mnCadastro.add(jMenuItem1);
-
-        jMenuItem2.setText("Serviço");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        mnCadastro.add(jMenuItem2);
-
-        jMenuBar1.add(mnCadastro);
 
         mnOperação.setText("Cálculo");
         mnOperação.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -93,10 +74,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void mnOperaçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnOperaçãoActionPerformed
         
@@ -143,12 +120,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JLabel lblFundo;
     private javax.swing.JLabel lblTexto;
-    private javax.swing.JMenu mnCadastro;
     private javax.swing.JMenu mnOperação;
     private javax.swing.JMenu mnRel;
     // End of variables declaration//GEN-END:variables

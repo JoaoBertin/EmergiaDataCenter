@@ -50,6 +50,7 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -127,14 +128,14 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         lblPlanoFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(lblPlanoFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 1640, 1170));
 
-        jMenu1.setText("Energias");
+        jMenu1.setText("MenuPrincipal");
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu1ActionPerformed(evt);
             }
         });
 
-        jMenuItem1.setText("Menu de Energias");
+        jMenuItem1.setText("MenuPrincipal");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -145,6 +146,15 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Relatório ");
+
+        jMenuItem2.setText("Relatório");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem2);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -186,19 +196,27 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
     }
     
     
+    private void btnNextTermicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextTermicaActionPerformed
+        CalcuEnTermica tela = new CalcuEnTermica();
+        tela.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnNextTermicaActionPerformed
+
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
 
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-      
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void btnNextTermicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextTermicaActionPerformed
-        CalcuCombustivelFossil tela = new CalcuCombustivelFossil();
+        MenuPrincipal tela = new MenuPrincipal();
         tela.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_btnNextTermicaActionPerformed
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        Relatório tela = new Relatório();
+        tela.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
 
 
@@ -249,6 +267,7 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JLabel lblDias;
     private javax.swing.JLabel lblHrsUso;
     private javax.swing.JLabel lblPlanoFundo;
