@@ -4,7 +4,7 @@
  */
 package Controller;
 
-import View.Consulta;
+import View.CalcuEnergiaIncorporada;
 import View.MenuPrincipal;
 
 
@@ -20,7 +20,7 @@ public class MenuPrincipalController {
     
     public void navegarParaConsulta(){
     
-        Consulta consulta = new Consulta();
+        CalcuEnergiaIncorporada consulta = new CalcuEnergiaIncorporada();
         consulta.setVisible(true);
         this.view.dispose();
         

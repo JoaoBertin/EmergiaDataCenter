@@ -41,5 +41,29 @@ public class LoginController {
     
     
     }
-   
-}
+    
+    public boolean verificarLogin(String email, String senha) throws SQLException {
+    Connection conn = null;
+    PreparedStatement stmt = null;
+    ResultSet rs = null;
+    try {
+        conn = new Conexao().getConnection();
+        String sql = "SELECT email, senha FROM login WHERE email = ? AND senha = ?";
+        stmt = conn.prepareStatement(sql);
+        stmt.setString(1, email);
+        stmt.setString(2, senha);
+        
+        rs = stmt.executeQuery();
+        return rs.next(); // Retorna true se um usuário correspondente for encontrado
+    } catch (SQLException e) {
+        // Logar a exceção ou tratar conforme necessário
+        e.printStackTrace();
+        throw e; // Ou pode retornar um valor específico se necessário
+    } finally {
+        // Fechar os recursos
+        if (rs != null) try { rs.close(); } catch (SQLException e) { e.printStackTrace(); }
+        if (stmt != null) try { stmt.close(); } catch (SQLException e) { e.printStackTrace(); }
+        if (conn != null) try { conn.close(); } catch (SQLException e) { e.printStackTrace(); }
+    }
+   }
+  }

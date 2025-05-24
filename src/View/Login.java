@@ -103,20 +103,23 @@ public class Login extends javax.swing.JFrame {
         
         }else{
         
-        
         try {
             // Tentativa de realizar o login do usuário
             LoginController login = new LoginController();
+            if(login.verificarLogin(txtEmail.getText(), txtSenha.getText())){
             // Chama o método para registrar o usuário que está tentando acessar
             login.loginUsuario(this);
             // Cria uma nova instância do menu principal, que aparecerá após o login
             MenuPrincipal telaDeMenu = new MenuPrincipal();
             telaDeMenu.setVisible(true);
             this.setVisible(false);
+            JOptionPane.showMessageDialog(rootPane, "Logado com sucesso");
+            }else{
+            JOptionPane.showMessageDialog(rootPane, "Email ou senha inválidos");
+            }
         } catch (SQLException ex) {
             // Captura possíveis exceções de banco de dados durante o processo de login
         }
-        JOptionPane.showMessageDialog(rootPane, "Logado com sucesso");
         }
     }//GEN-LAST:event_btnLogin2ActionPerformed
 

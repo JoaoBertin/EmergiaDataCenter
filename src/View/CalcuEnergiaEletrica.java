@@ -96,6 +96,11 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
 
         btnNextTermica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnNextTermica.setText("Próxima Emergia ");
+        btnNextTermica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextTermicaActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnNextTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, -1));
 
         lblPtDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -190,6 +195,12 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         con.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void btnNextTermicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextTermicaActionPerformed
+        CalcuCombustivelFossil tela = new CalcuCombustivelFossil();
+        tela.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnNextTermicaActionPerformed
 
 
 

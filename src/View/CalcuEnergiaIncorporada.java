@@ -77,6 +77,11 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
 
         btnNextMãodeObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnNextMãodeObra.setText("Próxima Energia ");
+        btnNextMãodeObra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextMãodeObraActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnNextMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 610, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
@@ -121,6 +126,12 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnMateriaisActionPerformed
+
+    private void btnNextMãodeObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextMãodeObraActionPerformed
+        CalcuMãoObra tela = new CalcuMãoObra();
+        tela.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnNextMãodeObraActionPerformed
 
     /**
      * @param args the command line arguments

@@ -99,6 +99,11 @@ public class CalcuMãoObra extends javax.swing.JFrame {
 
         btnNextElétrica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnNextElétrica.setText("Próxima Emergia ");
+        btnNextElétrica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextElétricaActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnNextElétrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 600, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
@@ -165,6 +170,12 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         con.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void btnNextElétricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextElétricaActionPerformed
+        CalcuEnergiaEletrica tela = new CalcuEnergiaEletrica();
+        tela.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnNextElétricaActionPerformed
 
     /**
      * @param args the command line arguments
