@@ -1,22 +1,25 @@
-
 package Calculo;
 
-
+// Classe responsável por calcular a emergia associada ao uso de combustíveis fósseis
 public class EnergiaCombustivelFossil {
-    private double volumeConsumido;     // em litros
-    private double poderCalorifico;     // MJ/L
-    private double transformidade;      // seJ/MJ
-    private String tipoCombustivel;
+    // Atributos principais da classe
+    private double volumeConsumido;     // Volume de combustível consumido em litros
+    private double poderCalorifico;     // Quantidade de energia por litro (MJ/litro)
+    private double transformidade;      // Valor de conversão de energia para emergia (seJ/MJ)
+    private String tipoCombustivel;     // Tipo do combustível utilizado
 
+    // Construtor: recebe o volume e o tipo de combustível escolhido pelo usuário
     public EnergiaCombustivelFossil(double volumeConsumido, String tipoCombustivel) {
         this.volumeConsumido = volumeConsumido;
-        this.tipoCombustivel = tipoCombustivel.toUpperCase(); // Usa maiúsculo
+        
+        // Converte para maiúsculas para evitar erros de comparação
+        this.tipoCombustivel = tipoCombustivel.toUpperCase();
 
-        // Define os valores de acordo com o combustível selecionado
+        // Define o poder calorífico e a transformidade com base no combustível
         switch (this.tipoCombustivel) {
             case "DIESEL":
-                this.poderCalorifico = 36.55;
-                this.transformidade = 6.6e4;
+                this.poderCalorifico = 36.55;    // energia por litro (MJ/L)
+                this.transformidade = 6.6e4;     // sej/MJ
                 break;
             case "GÁS NATURAL":
                 this.poderCalorifico = 36.66;
@@ -27,18 +30,20 @@ public class EnergiaCombustivelFossil {
                 this.transformidade = 1.24e5;
                 break;
             default:
+                // Se o tipo informado não for reconhecido
                 this.poderCalorifico = 0;
                 this.transformidade = 0;
                 break;
         }
     }
 
+    // Método que calcula a emergia total com base no volume e poder calorífico
     public double calcularEmergiaTotal() {
-        double energiaDisponivel = volumeConsumido * poderCalorifico;
-        return energiaDisponivel * transformidade;
+        double energiaDisponivel = volumeConsumido * poderCalorifico; // MJ
+        return energiaDisponivel * transformidade; // seJ
     }
 
-    // Getters (opcional)
+    // Métodos de acesso (Getters)
     public double getTransformidade() {
         return transformidade;
     }

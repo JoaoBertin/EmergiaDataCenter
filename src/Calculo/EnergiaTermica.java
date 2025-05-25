@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Calculo;
-
+// Classe responsável por calcular a emergia associada à Energia Térmica
 public class EnergiaTermica {
-
-
-
+// Atributos principais da classe
     private double potenciaTI = 0;        // kW - Equipamentos de TI
     private double iluminacao;        // kW - Iluminação
     private int numPessoas;           // Número de pessoas no ambiente

@@ -1,68 +1,47 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Calculo;
 
 import javax.swing.JOptionPane;
-
+// Classe responsável por calcular a emergia associada ao uso de Energia Elétrica e seus dispositivos
 public class EnergiaEletrica {
-    private String dispositivo;
-    private double potenciaKwh;
-    private double horasOperacao;
-    private int diasOperacao;
-    private double transformidade;
+    // Atributos principais da classe
+    private String dispositivo;           // Nome do equipamento (ex: servidor, roteador)
+    private double potenciaKwh;           // Potência do equipamento em kWh
+    private double horasOperacao;         // Horas que o equipamento funciona por dia
+    private int diasOperacao;             // Quantidade de dias de operação
+    private double transformidade;        // Transformidade (seJ/J) - define a conversão de energia para emergia
 
+    // Construtor da classe
     public EnergiaEletrica(String dispositivo, double potenciaKwh, double horasOperacao, int diasOperacao) {
         this.dispositivo = dispositivo;
         this.potenciaKwh = potenciaKwh;
         this.horasOperacao = horasOperacao;
         this.diasOperacao = diasOperacao;
         this.transformidade = transformidade;
-        
-        switch (dispositivo){
-             case "Servidores":
-                this.transformidade = 1.74e5;
-                break;
+
+        // Define a transformidade com base no tipo de dispositivo
+        switch (dispositivo) {
+            case "Servidores":
             case "Switches":
-                this.transformidade = 1.74e5;
-                break;
             case "Roteadores":
-                this.transformidade = 1.74e5;
-                break;
             case "Firewalls":
-                this.transformidade = 1.74e5;
-                break;
             case "Access Points (APs)":
-                this.transformidade = 1.74e5;
-                break;
             case "Fontes de Alimentação (UPS)":
-                this.transformidade = 1.74e5;
-                break;
             case "Sistema de Monitoramento":
-                this.transformidade = 1.74e5;
-                break;
             case "Ar condicionado":
-                this.transformidade = 1.74e5;
-                break;
             case "Sistema de Resfriamento Líquido":
-                this.transformidade = 1.74e5;
-                break;
-                case "Sistema Incêndio":
-                this.transformidade = 1.74e5;
+            case "Sistema Incêndio":
+                this.transformidade = 1.74e5; // Valor padrão para todos os dispositivos (pode ser ajustado futuramente)
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Dispositivo não reconhecido.");
                 this.dispositivo = "Desconhecido";
-                this.transformidade = 0;
+                this.transformidade = 0; // Se não for reconhecido, não calcula emergia
                 break;
-        
         }
     }
 
-    
-
-    // Getters
+    // Getters e Setters (acesso às variáveis da classe)
     public String getDispositivo() {
         return dispositivo;
     }
@@ -102,16 +81,17 @@ public class EnergiaEletrica {
     public void setTransformidade(double transformidade) {
         this.transformidade = transformidade;
     }
-    
 
-    // Cálculo da emergia total do dispositivo
+    // Método que calcula a emergia total (em seJ) consumida pelo dispositivo
     public double calcularEmergiaTotal() {
-        double energiaDisponivel = (potenciaKwh * horasOperacao * diasOperacao) * 3600; // kWh para Joules
+        // Converte energia de kWh para Joules: 1 kWh = 3600 kJ = 3.6e6 J
+        double energiaDisponivel = (potenciaKwh * horasOperacao * diasOperacao) * 3600;
         return energiaDisponivel * transformidade;
     }
 
-    // Cálculo do FTF (também com transformidade, se aplicável)
+    // Método FTF 
     public double calcularFTFEnEletrica() {
-        return calcularEmergiaTotal(); // Mesmo cálculo por enquanto
+        return calcularEmergiaTotal();
     }
 }
+

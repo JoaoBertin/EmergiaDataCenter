@@ -35,7 +35,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         setSize(new java.awt.Dimension(1280, 960));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,7 +48,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jMenu1.setText("Calculo");
+        jMenu1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem1.setText("Calculo");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,7 +62,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Emergia");
+        jMenu2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem2.setText("Emergia");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

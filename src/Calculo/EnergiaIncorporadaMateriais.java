@@ -1,10 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Calculo;
 
+package Calculo;
+// Classe responsável por calcular a emergia associada ao uso de Materiais na produção do Data Center
 public class EnergiaIncorporadaMateriais {
+    // Atributos principais da classe
     private double massa; // em kg
     private String tipoMaterial;
     private double energiaEspecifica; // em MJ/kg

@@ -1,47 +1,46 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Calculo;
 
 import javax.swing.JOptionPane;
 
+// Classe responsável por calcular a emergia associada à Mão de Obra humana
 public class EnergiaMaoDeObra {
-    private String trabalho;
-    private int numeroTrabalhadores;
-    private int horasTrabalhadas;
-    private int diasTrabalhados;
-    private double energiaMediaHora = 1.2; // em MJ/h
-    private final double transformidade = 3.12e6; // Transformidade pré-definida em sej (exemplo)
+    // Atributos principais da classe
+    private String trabalho;                // Profissão do trabalhador
+    private int numeroTrabalhadores;       // Quantidade de trabalhadores
+    private int horasTrabalhadas;          // Horas trabalhadas por dia
+    private int diasTrabalhados;           // Dias de operação
+    private double energiaMediaHora = 1.2; // Energia média por hora em MJ (valor padrão)
+    private final double transformidade = 3.12e6; // Transformidade fixa (seJ por MJ)
 
+    // Construtor: recebe os dados e define a energia média por hora com base na profissão
     public EnergiaMaoDeObra(String trabalho, int numeroTrabalhadores, int horasTrabalhadas, int diasTrabalhados) {
         this.trabalho = trabalho;
         this.numeroTrabalhadores = numeroTrabalhadores;
         this.horasTrabalhadas = horasTrabalhadas;
         this.diasTrabalhados = diasTrabalhados;
-          switch (trabalho){
-               case "Técnico em Redes":
-                this.energiaMediaHora = 16_200_000;
+
+        // Define energia média por hora conforme a profissão selecionada
+        switch (trabalho) {
+            case "Técnico em Redes":
+                this.energiaMediaHora = 16_200_000; // 4500 W * 3600 s
                 break;
             case "Técnico de TI":
-                this.energiaMediaHora = 54_000_000;
+                this.energiaMediaHora = 54_000_000; // 15000 W * 3600 s
                 break;
             case "Eng. Elétrico / Téc. Eletrotécnico":
-                this.energiaMediaHora = 12_600_000;
+                this.energiaMediaHora = 12_600_000; // 3500 W * 3600 s
                 break;
             case "Analista de Cibersegurança":
-                this.energiaMediaHora = 41_400_000;
+                this.energiaMediaHora = 41_400_000; // 11500 W * 3600 s
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Profissão inválida! Transformidade será 0.");
                 this.energiaMediaHora = 0;
                 break;
-          }
+        }
     }
 
-    
-    
-
+    // Getters e Setters
     public int getNumeroTrabalhadores() {
         return numeroTrabalhadores;
     }
@@ -74,16 +73,20 @@ public class EnergiaMaoDeObra {
         this.energiaMediaHora = energiaMediaHora;
     }
 
+    // Calcula a emergia total para um dia de trabalho (sem considerar os dias)
     public double calcularEmergiaTotal() {
         double energiaDisponivel = numeroTrabalhadores * horasTrabalhadas * energiaMediaHora;
         return energiaDisponivel * transformidade;
     }
 
+    // Calcula a emergia total considerando os dias trabalhados
     public double calcularFTFMaoDeObra() {
         double energiaDisponivel = numeroTrabalhadores * horasTrabalhadas * diasTrabalhados * energiaMediaHora;
         return energiaDisponivel * transformidade;
     }
 }
+
+
 
 
 

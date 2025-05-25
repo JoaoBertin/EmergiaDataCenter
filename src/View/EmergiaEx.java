@@ -38,7 +38,6 @@ public class EmergiaEx extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -56,7 +55,9 @@ public class EmergiaEx extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jMenu1.setText("MenuPrincipal");
+        jMenu1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem1.setText("MenuPrincipal");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +69,7 @@ public class EmergiaEx extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Calculo");
+        jMenu2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jMenuItem2.setText("Calculo");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
