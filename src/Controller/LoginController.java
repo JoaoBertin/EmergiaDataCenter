@@ -41,19 +41,30 @@ public class LoginController {
     
     
     }
-    
+    // Método público que verifica o login de um usuário, recebendo email e senha.
     public boolean verificarLogin(String email, String senha) throws SQLException {
+        
+    // Inicializa as variáveis de conexão e comando SQL.
     Connection conn = null;
     PreparedStatement stmt = null;
     ResultSet rs = null;
     try {
+        // Estabelece uma nova conexão com o banco de dados.
         conn = new Conexao().getConnection();
+        
+        // Define a consulta SQL que verifica se o email e a senha correspondem a um usuário.
         String sql = "SELECT email, senha FROM login WHERE email = ? AND senha = ?";
+        
+        // Prepara a consulta SQL usando a conexão estabelecida.
         stmt = conn.prepareStatement(sql);
+        
+        // Define os parâmetros da consulta (email e senha).
         stmt.setString(1, email);
         stmt.setString(2, senha);
         
+        // Executa a consulta e armazena o resultado em 'rs'.
         rs = stmt.executeQuery();
+        
         return rs.next(); // Retorna true se um usuário correspondente for encontrado
     } catch (SQLException e) {
         // Logar a exceção ou tratar conforme necessário

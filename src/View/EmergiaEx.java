@@ -38,6 +38,7 @@ public class EmergiaEx extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -87,15 +88,15 @@ public class EmergiaEx extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        MenuPrincipal tela = new MenuPrincipal();
-        tela.setVisible(true);
-        this.setVisible(false);
+        MenuPrincipal tela = new MenuPrincipal(); // Redirecionamento da tela para o menu principal
+        tela.setVisible(true); // Cria e exibe a tela de calculo
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        CalcuEnergiaIncorporada tela = new CalcuEnergiaIncorporada();
-        tela.setVisible(true);
-        this.setVisible(false);
+        CalcuEnergiaIncorporada tela = new CalcuEnergiaIncorporada(); // Redirecionamento da tela para o calculo
+        tela.setVisible(true); // Cria e exibe a tela de calculo
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**

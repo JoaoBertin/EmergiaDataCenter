@@ -53,6 +53,7 @@ public class Relatório extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -221,15 +222,15 @@ telaGrafico.setVisible(true);
     }//GEN-LAST:event_btnEmergiaGeralActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        MenuPrincipal con = new MenuPrincipal();
-        con.setVisible(true);
-        this.setVisible(false);
+        MenuPrincipal con = new MenuPrincipal(); // Redirecionamento da tela para o menu princiapl
+        con.setVisible(true); // Cria e exibe a tela do menu principal
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        CalcuEnergiaIncorporada con = new CalcuEnergiaIncorporada();
-        con.setVisible(true);
-        this.setVisible(false);
+        CalcuEnergiaIncorporada con = new CalcuEnergiaIncorporada(); // Redirecionamento da tela para o calculo
+        con.setVisible(true); // Cria e exibe a tela do calculo
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void btnEmergiaPizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmergiaPizzaActionPerformed

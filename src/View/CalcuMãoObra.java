@@ -43,6 +43,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -189,9 +190,9 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEnMaoObraActionPerformed
 
     private void btnNextElétricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextElétricaActionPerformed
-        CalcuEnergiaEletrica tela = new CalcuEnergiaEletrica();
-        tela.setVisible(true);
-        this.setVisible(false);
+        CalcuEnergiaEletrica tela = new CalcuEnergiaEletrica(); // Redirecionamento da tela para o próximo calculo
+        tela.setVisible(true); // Cria e exibe a tela de calculo
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_btnNextElétricaActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
@@ -199,15 +200,15 @@ public class CalcuMãoObra extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-          MenuPrincipal tela = new MenuPrincipal();
-          tela.setVisible(true);
-          this.setVisible(false);
+          MenuPrincipal tela = new MenuPrincipal(); // Redirecionamento da tela para o menu principal
+          tela.setVisible(true); // Cria e exibe a tela do menu principal
+          this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        Relatório tela = new Relatório();
-        tela.setVisible(true);
-        this.setVisible(false);
+        Relatório tela = new Relatório(); // Redirecionamento da tela para o relatório
+        tela.setVisible(true); // Cria e exibe a tela de relatório
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**

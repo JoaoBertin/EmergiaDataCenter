@@ -127,8 +127,8 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Cadastro cadastro = new Cadastro(); //Redirecionamte para a tela de cadastro
-        cadastro.setVisible(true);
-        this.setVisible(false);
+        cadastro.setVisible(true); // Cria e exibe a tela de cadastro
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public JTextField getTxtEmail() {

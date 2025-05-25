@@ -9,10 +9,10 @@ import java.sql.*;
 
 public class Conexao {
     
-    
+    // Método que retorna uma conexão com o banco de dados, podendo lançar uma exceção SQL
     public Connection getConnection() throws SQLException{
         String url = "jdbc:sqlite:aps.db"; //Url do banco de dados
-        Connection conexao = null;
+        Connection conexao = null; // Inicializa a conexão como nula
         
         try{
             // Conexão do Netbeans com o banco de dados 

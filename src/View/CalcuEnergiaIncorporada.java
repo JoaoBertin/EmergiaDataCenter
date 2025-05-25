@@ -173,21 +173,21 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMateriaisActionPerformed
 
     private void btnNextMãodeObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextMãodeObraActionPerformed
-        CalcuMãoObra tela = new CalcuMãoObra();
-        tela.setVisible(true);
-        this.setVisible(false);
+        CalcuMãoObra tela = new CalcuMãoObra(); // Redirecionamento da tela para o proximo calculo
+        tela.setVisible(true); // Cria e exbie a tela de calculo
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_btnNextMãodeObraActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-         Relatório tela = new Relatório();
-         tela.setVisible(true);
-         this.setVisible(false);
+         Relatório tela = new Relatório(); // Redirecionamento da tela para o relatório
+         tela.setVisible(true); // Cria e exibe a tela de relatório
+         this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        MenuPrincipal tela = new MenuPrincipal();
-        tela.setVisible(true);
-        this.setVisible(false);
+        MenuPrincipal tela = new MenuPrincipal(); // Redirecionamento da tela para o menu principal
+        tela.setVisible(true); // Cria e exibe a tela de relatório
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void txtMassaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMassaActionPerformed

@@ -153,8 +153,8 @@ public class Cadastro extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // Redirecionameto para a tela de login
         Login telaDeLogin = new Login();
-        telaDeLogin.setVisible(true);
-        this.setVisible(false);
+        telaDeLogin.setVisible(true); // Cria e exibe a tela de login
+        this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void txtEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmpresaActionPerformed
