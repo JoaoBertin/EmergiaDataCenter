@@ -34,7 +34,6 @@ public class CalcuEnTermica extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -57,7 +56,7 @@ public class CalcuEnTermica extends javax.swing.JFrame {
         getContentPane().add(txtNumPessoas, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 440, 130, -1));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 560, 270, -1));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 560, 280, -1));
 
         btnEnTermica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEnTermica.setText("Calcular Emergia");
@@ -66,7 +65,7 @@ public class CalcuEnTermica extends javax.swing.JFrame {
                 btnEnTermicaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEnTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 610, -1, -1));
+        getContentPane().add(btnEnTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 610, -1, -1));
 
         btnNextCombus.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnNextCombus.setText("Próxima Emergia ");

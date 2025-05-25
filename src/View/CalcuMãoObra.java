@@ -43,7 +43,6 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -77,10 +76,10 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         getContentPane().add(txtTrabalhadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 330, 100, 30));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 490, 250, -1));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 500, 300, -1));
 
         txtResultadoTotal.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 560, 250, 30));
+        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 560, 300, 30));
 
         btnEnMaoObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEnMaoObra.setText("Confirmar Energia ");
