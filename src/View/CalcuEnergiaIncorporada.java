@@ -48,19 +48,21 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         jLabel4.setText("Calculo Emergia Incorporada dos Materiais");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setText("Massa: Kg");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, -1, -1));
 
         cboxMateriais.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         cboxMateriais.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Concreto Armado", "Aço Estrutural", "Aço Luminado", "Alumínio", "Cobre", "Plástico", "Silício", "Fibra de Vidro", "Resina", "Vidro Temperado", "Isolamento Térmico", "Aguá Tratada", " ", " " }));
-        getContentPane().add(cboxMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, -1, -1));
+        getContentPane().add(cboxMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, -1, -1));
 
         txtMassa.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtMassa.addActionListener(new java.awt.event.ActionListener() {
@@ -68,13 +70,13 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
                 txtMassaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtMassa, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 430, 100, -1));
+        getContentPane().add(txtMassa, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 430, 100, -1));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 300, -1));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 300, -1));
 
         txtResultadoGeral.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultadoGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 560, 300, -1));
+        getContentPane().add(txtResultadoGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 560, 300, -1));
 
         btnMateriais.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnMateriais.setText("Calcular Emergia ");
@@ -83,7 +85,7 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
                 btnMateriaisActionPerformed(evt);
             }
         });
-        getContentPane().add(btnMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, -1, -1));
+        getContentPane().add(btnMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 530, -1, -1));
 
         btnNextMãodeObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnNextMãodeObra.setText("Próxima Emergia ");
@@ -92,10 +94,10 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
                 btnNextMãodeObraActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNextMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 620, -1, -1));
+        getContentPane().add(btnNextMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 620, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 880, 460));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 880, 460));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N

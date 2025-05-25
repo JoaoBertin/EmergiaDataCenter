@@ -52,42 +52,44 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cboxMãodeObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         cboxMãodeObra.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Técnico em Redes", "Técnico de TI", "Eng. Elétrico / Téc. Eletrotécnico", "Analista de Cibersegurança", " " }));
-        getContentPane().add(cboxMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
+        getContentPane().add(cboxMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         jLabel2.setText("Calculo de Emergia de Mão de Obra");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, -1, 40));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, -1, 40));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel4.setText("N° de Trabalhadores:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel5.setText("Quantas Horas de Thabalho por dia:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel6.setText("Quantos dias de Operação:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, -1, -1));
 
         txtHrsDia.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtHrsDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 370, 100, -1));
+        getContentPane().add(txtHrsDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 370, 100, -1));
 
         txtDiasOp.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtDiasOp, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 410, 100, -1));
+        getContentPane().add(txtDiasOp, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 410, 100, -1));
 
         txtTrabalhadores.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtTrabalhadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 330, 100, 30));
+        getContentPane().add(txtTrabalhadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 330, 100, 30));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 490, 250, -1));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 490, 250, -1));
 
         txtResultadoTotal.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 250, 30));
+        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 560, 250, 30));
 
         btnEnMaoObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEnMaoObra.setText("Confirmar Energia ");
@@ -96,7 +98,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
                 btnEnMaoObraActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEnMaoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 530, -1, -1));
+        getContentPane().add(btnEnMaoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 530, -1, -1));
 
         btnNextElétrica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnNextElétrica.setText("Próxima Emergia ");
@@ -105,10 +107,10 @@ public class CalcuMãoObra extends javax.swing.JFrame {
                 btnNextElétricaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNextElétrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 600, -1, -1));
+        getContentPane().add(btnNextElétrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 600, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 890, 460));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 890, 460));
 
         lblParede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(lblParede, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, -1, 1090));

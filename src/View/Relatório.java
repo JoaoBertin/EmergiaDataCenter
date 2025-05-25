@@ -52,6 +52,8 @@ public class Relatório extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnEmergiaGeral.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -61,7 +63,7 @@ public class Relatório extends javax.swing.JFrame {
                 btnEmergiaGeralActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergiaGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, 340, 40));
+        getContentPane().add(btnEmergiaGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 340, 40));
 
         btnEmergiaPizza.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEmergiaPizza.setText("Gráfico Geral das Emergia Pizza");
@@ -70,7 +72,7 @@ public class Relatório extends javax.swing.JFrame {
                 btnEmergiaPizzaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergiaPizza, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 340, 40));
+        getContentPane().add(btnEmergiaPizza, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 340, 40));
 
         btnEmergiaLinha.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEmergiaLinha.setText("Gráfico Geral das Emergias Linha");
@@ -79,7 +81,7 @@ public class Relatório extends javax.swing.JFrame {
                 btnEmergiaLinhaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergiaLinha, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 280, 340, 40));
+        getContentPane().add(btnEmergiaLinha, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, 340, 40));
 
         jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton1.setText("Valores das Emergias");
@@ -88,20 +90,20 @@ public class Relatório extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 700, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 710, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel3.setText("Gráficos/Relatório");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 230, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, 490, 300));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 490, 300));
 
         txtEmMaterial.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtEmMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 500, 280, -1));
+        getContentPane().add(txtEmMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, 280, -1));
 
         txtEmMaoObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtEmMaoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 540, 280, -1));
+        getContentPane().add(txtEmMaoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 550, 280, -1));
 
         txtEmEletrica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtEmEletrica.addActionListener(new java.awt.event.ActionListener() {
@@ -109,10 +111,10 @@ public class Relatório extends javax.swing.JFrame {
                 txtEmEletricaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmEletrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 580, 280, -1));
+        getContentPane().add(txtEmEletrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 590, 280, -1));
 
         txtEmtermica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtEmtermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 620, 280, -1));
+        getContentPane().add(txtEmtermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 630, 280, -1));
 
         txtEmFossil.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtEmFossil.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +122,7 @@ public class Relatório extends javax.swing.JFrame {
                 txtEmFossilActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmFossil, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 660, 280, -1));
+        getContentPane().add(txtEmFossil, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 670, 280, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1600, 1010));

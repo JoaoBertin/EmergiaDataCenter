@@ -43,11 +43,13 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         btnRelatorio = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         jLabel2.setText("Cálculo de Emergia Combústivel Fóssil ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, -1, -1));
 
         cboxCombustivel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         cboxCombustivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gás Natural", "Diesel", "hvo", " ", " ", " ", " " }));
@@ -56,17 +58,17 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
                 cboxCombustivelActionPerformed(evt);
             }
         });
-        getContentPane().add(cboxCombustivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, -1, -1));
+        getContentPane().add(cboxCombustivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 420, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setText("Volume: L");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
 
         txtVolume.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 360, 110, -1));
+        getContentPane().add(txtVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 470, 110, -1));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 210, 30));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 540, 210, 30));
 
         btnRegistroCombus.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnRegistroCombus.setText("Calcular Emergia");
@@ -75,15 +77,20 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
                 btnRegistroCombusActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistroCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 480, -1, -1));
+        getContentPane().add(btnRegistroCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 590, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton1.setText("Relatório");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 570, -1, -1));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 680, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 900, 460));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 900, 460));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -70, -1, 1160));
@@ -170,6 +177,12 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         tela.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnRelatorioActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Relatório tela = new Relatório();
+        tela.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -53,21 +53,23 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblDias.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblDias.setText("Quantos dias operados no mês:");
-        getContentPane().add(lblDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, -1, -1));
+        getContentPane().add(lblDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, -1, -1));
 
         cboxDisp.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         cboxDisp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Servidores", "Switches", "Roteadores", "Firewalls", "Access Points (APs) ", "Fontes de Alimentação (UPS)", "Sistema de Monitoramento", "Ar condicionado", "Sistema de Resfriamento Líquido", "Sistema Incêndio", " ", " ", " ", " ", " " }));
-        getContentPane().add(cboxDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, -1, -1));
+        getContentPane().add(cboxDisp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, -1, -1));
 
         txtQtdDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtQtdDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 360, 150, -1));
+        getContentPane().add(txtQtdDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 360, 150, -1));
 
         txtPtDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtPtDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 400, 150, -1));
+        getContentPane().add(txtPtDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 400, 150, -1));
 
         txtHrsUso.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtHrsUso.addActionListener(new java.awt.event.ActionListener() {
@@ -75,16 +77,16 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
                 txtHrsUsoActionPerformed(evt);
             }
         });
-        getContentPane().add(txtHrsUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 440, 150, 30));
+        getContentPane().add(txtHrsUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 440, 150, 30));
 
         txtDias.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 480, 150, 30));
+        getContentPane().add(txtDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 480, 150, 30));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 330, -1));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, 330, -1));
 
         txtResultadoTotal.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 580, 330, 30));
+        getContentPane().add(txtResultadoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 580, 330, 30));
 
         btnAd.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnAd.setText("Confirmar Dispositivo");
@@ -93,7 +95,7 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
                 btnAdActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAd, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 550, -1, -1));
+        getContentPane().add(btnAd, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 550, -1, -1));
 
         btnNextTermica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnNextTermica.setText("Próxima Emergia ");
@@ -102,28 +104,28 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
                 btnNextTermicaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNextTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 610, -1, -1));
+        getContentPane().add(btnNextTermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 610, -1, -1));
 
         lblPtDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblPtDispositivo.setText("Potência de cada dispositivo: KWH");
-        getContentPane().add(lblPtDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, -1, -1));
+        getContentPane().add(lblPtDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, -1, -1));
 
         lblHrsUso.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblHrsUso.setText("Tempo médio em horas do dispositivo em uso: p\\dia");
-        getContentPane().add(lblHrsUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 430, -1, -1));
+        getContentPane().add(lblHrsUso, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, -1, -1));
 
         lblqtdDispositivo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblqtdDispositivo.setText("Quantidade do dispositivo:");
-        getContentPane().add(lblqtdDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 220, 20));
+        getContentPane().add(lblqtdDispositivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 220, 20));
 
         lblTitulo.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lblTitulo.setText("Cálculo de Emergia Elétrica");
-        getContentPane().add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+        getContentPane().add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, -1, -1));
 
         lblQuadroBranco.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblQuadroBranco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Painel Branco.jpg"))); // NOI18N
         lblQuadroBranco.setText("jLabel3");
-        getContentPane().add(lblQuadroBranco, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 890, 410));
+        getContentPane().add(lblQuadroBranco, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 890, 410));
 
         lblPlanoFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(lblPlanoFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 1640, 1170));
