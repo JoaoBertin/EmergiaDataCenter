@@ -28,12 +28,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         lblTexto = new javax.swing.JLabel();
         lblFundo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
+        mnEmergia = new javax.swing.JMenu();
         mnOperação = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         mnRel = new javax.swing.JMenu();
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -49,6 +53,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         lblFundo.setText("lblPlasn");
         getContentPane().add(lblFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1630, -1));
 
+        mnEmergia.setText("Emergia");
+        mnEmergia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuBar1.add(mnEmergia);
+
         mnOperação.setText("Cálculo");
         mnOperação.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         mnOperação.addActionListener(new java.awt.event.ActionListener() {
@@ -57,6 +65,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem3.setText("Calculadora");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +77,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(mnOperação);
 
         mnRel.setText("Relatório");
+        mnRel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuBar1.add(mnRel);
 
         setJMenuBar(jMenuBar1);
@@ -119,10 +129,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JLabel lblFundo;
     private javax.swing.JLabel lblTexto;
+    private javax.swing.JMenu mnEmergia;
     private javax.swing.JMenu mnOperação;
     private javax.swing.JMenu mnRel;
     // End of variables declaration//GEN-END:variables

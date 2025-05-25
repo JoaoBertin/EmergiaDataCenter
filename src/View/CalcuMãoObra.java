@@ -55,7 +55,7 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cboxMãodeObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        cboxMãodeObra.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Técnico em Redes", "Técnico de TI", "Eng. Elétrico / Téc. Eletrotécnico", "Técnico em Climatização", "Analista de Cibersegurança", "Técnico ou Engenheiro" }));
+        cboxMãodeObra.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Técnico em Redes", "Técnico de TI", "Eng. Elétrico / Téc. Eletrotécnico", "Analista de Cibersegurança", " " }));
         getContentPane().add(cboxMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
@@ -113,14 +113,16 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         lblParede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(lblParede, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, -1, 1090));
 
-        jMenu1.setText("MenuPrincipal");
+        jMenu1.setText("Menu Principal");
+        jMenu1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu1ActionPerformed(evt);
             }
         });
 
-        jMenuItem1.setText("MenuPrincipal");
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem1.setText("Menu Principal");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -131,7 +133,9 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Relatório");
+        jMenu2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        jMenuItem2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItem2.setText("Relatório");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,16 +160,17 @@ public class CalcuMãoObra extends javax.swing.JFrame {
         int numTrabalhadores = Integer.parseInt(txtTrabalhadores.getText());
         
         double resultadoTotalMaodeObra = 0;
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < 8; i++){
         EnergiaMaoDeObra maoObra = new EnergiaMaoDeObra(trabalho, numTrabalhadores, horasPorDia, diasOperacao);
         listaMaoDeObra.add(maoObra);
         resultadoTotalMaodeObra += maoObra.calcularEmergiaTotal();
         }
         emergiaTotalAcomuladaMãoObra += resultadoTotalMaodeObra; 
 
-        txtResultado.setText(String.format("Emergia Dispositivo: %.2e sej", resultadoTotalMaodeObra));
+        txtResultado.setText(String.format("Emergia do trabalho: %.2e sej", resultadoTotalMaodeObra));
         txtResultadoTotal.setText(String.format("Emergia Total: %.2e sej", emergiaTotalAcomuladaMãoObra));
         DadosEmergia.maoDeObra = emergiaTotalAcomuladaMãoObra;
+        JOptionPane.showMessageDialog(this, "Trabalho adicionado com sucesso!");
     } catch (NumberFormatException ex) {
         JOptionPane.showMessageDialog(this, "Insira apenas números válidos nos campos.");
     }// TODO add your handling code here:

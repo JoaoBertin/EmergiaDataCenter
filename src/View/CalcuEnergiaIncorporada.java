@@ -52,24 +52,29 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         jLabel4.setText("Calculo Emergia Incorporada dos Materiais");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel3.setText("Massa:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, -1, -1));
+        jLabel3.setText("Massa: Kg");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
 
         cboxMateriais.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         cboxMateriais.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Concreto Armado", "Aço Estrutural", "Aço Luminado", "Alumínio", "Cobre", "Plástico", "Silício", "Fibra de Vidro", "Resina", "Vidro Temperado", "Isolamento Térmico", "Aguá Tratada", " ", " " }));
-        getContentPane().add(cboxMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, -1, -1));
+        getContentPane().add(cboxMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, -1, -1));
 
         txtMassa.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtMassa, new org.netbeans.lib.awtextra.AbsoluteConstraints(824, 410, 100, -1));
+        txtMassa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMassaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtMassa, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 430, 100, -1));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 260, -1));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 300, -1));
 
         txtResultadoGeral.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultadoGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 570, 260, -1));
+        getContentPane().add(txtResultadoGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 560, 300, -1));
 
         btnMateriais.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnMateriais.setText("Calcular Emergia ");
@@ -78,26 +83,28 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
                 btnMateriaisActionPerformed(evt);
             }
         });
-        getContentPane().add(btnMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 540, -1, -1));
+        getContentPane().add(btnMateriais, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 530, -1, -1));
 
         btnNextMãodeObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        btnNextMãodeObra.setText("Próxima Energia ");
+        btnNextMãodeObra.setText("Próxima Emergia ");
         btnNextMãodeObra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNextMãodeObraActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNextMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 610, -1, -1));
+        getContentPane().add(btnNextMãodeObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 620, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 880, 460));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 880, 460));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, 1020));
 
         jMenu1.setText("Menu Principal");
+        jMenu1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem2.setText("Menu Principal");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +116,9 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Relatório");
+        jMenu2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenuItem1.setText("Relatório");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +141,7 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
     double massa = Double.parseDouble(txtMassa.getText());
 
     double resultado = 0;
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 24; i++) {
         EnergiaIncorporadaMateriais energiaM = new EnergiaIncorporadaMateriais(massa, tipoMaterial);
         listaEnergiaMateriais.add(energiaM);
         resultado += energiaM.calcularEmergiaIncorporada();
@@ -175,6 +184,10 @@ public class CalcuEnergiaIncorporada extends javax.swing.JFrame {
         tela.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void txtMassaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMassaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMassaActionPerformed
 
     /**
      * @param args the command line arguments

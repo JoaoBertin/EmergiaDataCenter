@@ -1,30 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Calculo;
 
+
 public class EnergiaCombustivelFossil {
-    private double volumeConsumido; // em litros
-    private double poderCalorifico; // em MJ/litro
-    private double transformidade; // sej/MJ
+    private double volumeConsumido;     // em litros
+    private double poderCalorifico;     // MJ/L
+    private double transformidade;      // seJ/MJ
     private String tipoCombustivel;
 
-    
-    public EnergiaCombustivelFossil(double volumeConsumido, double poderCalorifico1, String tipoCombustivel) {
+    public EnergiaCombustivelFossil(double volumeConsumido, String tipoCombustivel) {
         this.volumeConsumido = volumeConsumido;
-        this.tipoCombustivel = tipoCombustivel.toLowerCase();
+        this.tipoCombustivel = tipoCombustivel.toUpperCase(); // Usa maiúsculo
 
+        // Define os valores de acordo com o combustível selecionado
         switch (this.tipoCombustivel) {
-            case "diesel":
+            case "DIESEL":
                 this.poderCalorifico = 36.55;
                 this.transformidade = 6.6e4;
                 break;
-            case "gás natural":
+            case "GÁS NATURAL":
                 this.poderCalorifico = 36.66;
                 this.transformidade = 4.8e4;
                 break;
-            case "hvo":
+            case "HVO":
                 this.poderCalorifico = 34.32;
                 this.transformidade = 1.24e5;
                 break;
@@ -35,35 +33,25 @@ public class EnergiaCombustivelFossil {
         }
     }
 
-    
-    public double getVolumeConsumido() {
-        return volumeConsumido;
+    public double calcularEmergiaTotal() {
+        double energiaDisponivel = volumeConsumido * poderCalorifico;
+        return energiaDisponivel * transformidade;
     }
 
-    public void setVolumeConsumido(double volumeConsumido) {
-        this.volumeConsumido = volumeConsumido;
+    // Getters (opcional)
+    public double getTransformidade() {
+        return transformidade;
     }
 
     public double getPoderCalorifico() {
         return poderCalorifico;
     }
 
-    public double getTransformidade() {
-        return transformidade;
-    }
-
     public String getTipoCombustivel() {
         return tipoCombustivel;
     }
 
-    
-    public double calcularEmergiaTotal() {
-        double energiaDisponivel = volumeConsumido * poderCalorifico;
-        return energiaDisponivel * transformidade;
-    }
-
-    
-    public double calcularFTFCombustivel() {
-        return calcularEmergiaTotal();
+    public double getVolumeConsumido() {
+        return volumeConsumido;
     }
 }

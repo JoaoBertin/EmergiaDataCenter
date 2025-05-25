@@ -33,6 +33,7 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         txtVolume = new javax.swing.JTextField();
         txtResultado = new javax.swing.JTextField();
         btnRegistroCombus = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -46,7 +47,7 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         jLabel2.setText("Cálculo de Emergia Combústivel Fóssil ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, -1, -1));
 
         cboxCombustivel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         cboxCombustivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gás Natural", "Diesel", "hvo", " ", " ", " ", " " }));
@@ -55,42 +56,48 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
                 cboxCombustivelActionPerformed(evt);
             }
         });
-        getContentPane().add(cboxCombustivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
+        getContentPane().add(cboxCombustivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setText("Volume: L");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
 
         txtVolume.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 370, 110, -1));
+        getContentPane().add(txtVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 360, 110, -1));
 
         txtResultado.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 450, 180, 30));
+        getContentPane().add(txtResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 210, 30));
 
         btnRegistroCombus.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        btnRegistroCombus.setText("Confirmar Valores");
+        btnRegistroCombus.setText("Calcular Emergia");
         btnRegistroCombus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistroCombusActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistroCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 500, -1, -1));
+        getContentPane().add(btnRegistroCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 480, -1, -1));
+
+        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton1.setText("Relatório");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 570, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 900, 460));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 900, 460));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -70, -1, 1160));
 
-        jMenu1.setText("MenuPrincipal");
+        jMenu1.setText("Menu Principal");
+        jMenu1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu1ActionPerformed(evt);
             }
         });
 
-        jMenuItem1.setText("MenuPrincipal");
+        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMenuItem1.setText("Menu Principal");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -101,7 +108,9 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Relatório");
+        jMenu2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        btnRelatorio.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnRelatorio.setText("Relatório");
         btnRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,42 +132,26 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
 
     private void btnRegistroCombusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroCombusActionPerformed
 
-        try {
-        double volume = Double.parseDouble(txtVolume.getText());
+    try {
+    double volume = Double.parseDouble(txtVolume.getText());
 
-        String tipoCombustivel = cboxCombustivel.getSelectedItem().toString().toLowerCase();
+    // Pega o texto do ComboBox e envia direto para o construtor
+    String tipoCombustivel = cboxCombustivel.getSelectedItem().toString();
 
-        double poderCalorifico;
-        double transformidade;
+    EnergiaCombustivelFossil combustivel = new EnergiaCombustivelFossil(volume, tipoCombustivel);
+    double emergiaCombustivel = combustivel.calcularEmergiaTotal();
 
-        switch (tipoCombustivel) {
-            case "diesel":
-                poderCalorifico = 36.55;
-                transformidade = 6.6e4;
-                break;
-            case "gás natural":
-                poderCalorifico = 36.66;
-                transformidade = 4.8e4;
-                break;
-            case "hvo":
-                poderCalorifico = 34.32;
-                transformidade = 1.24e5;
-                break;
-            default:
-                throw new IllegalArgumentException("Tipo de combustível inválido.");
-        }
+    txtResultado.setText(String.format("Emergia Fóssil: %.2e sej", emergiaCombustivel));
+    DadosEmergia.combustivel = emergiaCombustivel;
 
-        EnergiaCombustivelFossil combustivel = new EnergiaCombustivelFossil(volume, poderCalorifico, tipoCombustivel);
+    JOptionPane.showMessageDialog(this, "Emergia do combustível registrada com sucesso!");
+    txtVolume.setText("");
 
-        double emergia = combustivel.calcularEmergiaTotal();
-
-        txtResultado.setText(String.format("%.2e sej", emergia));
-        DadosEmergia.combustivel = emergia;
-    } catch (NumberFormatException ex) {
-        JOptionPane.showMessageDialog(this, "Por favor, insira um número válido para o volume.");
-    } catch (IllegalArgumentException ex) {
-        JOptionPane.showMessageDialog(this, ex.getMessage());
-    }
+} catch (NumberFormatException ex) {
+    JOptionPane.showMessageDialog(this, "Por favor, insira um número válido para o volume.");
+} catch (Exception ex) {
+    JOptionPane.showMessageDialog(this, "Erro inesperado: " + ex.getMessage());
+}
 
     }//GEN-LAST:event_btnRegistroCombusActionPerformed
 
@@ -217,6 +210,7 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
     private javax.swing.JButton btnRegistroCombus;
     private javax.swing.JMenuItem btnRelatorio;
     private javax.swing.JComboBox<String> cboxCombustivel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
