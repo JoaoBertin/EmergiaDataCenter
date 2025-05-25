@@ -64,25 +64,37 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-      </Group>
-    </DimensionLayout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="18" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;    &lt;body&gt;&#xa;        &lt;h2&gt;Por que calcular a emergia &#xe9; importante?&lt;/h2&gt;&#xa;        &#xa;        &lt;p&gt;O c&#xe1;lculo da emergia permite avaliar o impacto energ&#xe9;tico e ambiental de um sistema, &lt;br&gt;&lt;br&gt; considerando &#xa;        todos os recursos utilizados em sua produ&#xe7;&#xe3;o e funcionamento.&lt;/p&gt;&#xa;        &#xa;        &lt;p&gt;Com essa an&#xe1;lise, &#xe9; poss&#xed;vel identificar oportunidades para:&lt;/p&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Reduzir desperd&#xed;cios e otimizar processos.&lt;/li&gt;&#xa;            &lt;li&gt;Aprimorar a efici&#xea;ncia no uso dos recursos.&lt;/li&gt;&#xa;            &lt;li&gt;Comparar fontes renov&#xe1;veis e n&#xe3;o renov&#xe1;veis.&lt;/li&gt;&#xa;            &lt;li&gt;Minimizar impactos ambientais e emiss&#xf5;es de carbono.&lt;/li&gt;&#xa;            &lt;li&gt;Tomar decis&#xf5;es estrat&#xe9;gicas sustent&#xe1;veis.&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;        &#xa;        &lt;p&gt;A aba &lt;strong&gt;Emergia&lt;/strong&gt; fornecer&#xe1; informa&#xe7;&#xf5;es detalhadas sobre o conceito de emergia &#xa;        e a explica&#xe7;&#xe3;o sobre o funcionamento de um &lt;strong&gt;Data Center&lt;/strong&gt;, &lt;br&gt;&lt;br&gt; permitindo uma vis&#xe3;o &#xa;        mais completa dos processos envolvidos.&lt;/p&gt;&#xa;        &lt;br&gt;&lt;br&gt;&#xa;        &lt;p&gt;A calculadora de emergia gera um gr&#xe1;fico ao final do c&#xe1;lculo, permitindo visualizar &#xa;        os impactos e oportunidades de melhoria.&lt;/p&gt;&#xa;    &lt;/body&gt;&#xa;&lt;/html&gt;"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="10" y="0" width="-1" height="400"/>
+        </Constraint>
+      </Constraints>
+    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/View/Imagens/DataCenter Login2.jpg"/>
         </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
   </SubComponents>
 </Form>

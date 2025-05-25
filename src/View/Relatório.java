@@ -36,7 +36,8 @@ public class Relatório extends javax.swing.JFrame {
         btnEmergiaGeral = new javax.swing.JButton();
         btnEmergiaPizza = new javax.swing.JButton();
         btnEmergiaLinha = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnValor = new javax.swing.JButton();
+        btnClassi = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtEmMaterial = new javax.swing.JTextField();
@@ -52,7 +53,6 @@ public class Relatório extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -63,7 +63,7 @@ public class Relatório extends javax.swing.JFrame {
                 btnEmergiaGeralActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergiaGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 340, 40));
+        getContentPane().add(btnEmergiaGeral, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 340, 40));
 
         btnEmergiaPizza.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEmergiaPizza.setText("Gráfico Geral das Emergia Pizza");
@@ -72,7 +72,7 @@ public class Relatório extends javax.swing.JFrame {
                 btnEmergiaPizzaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergiaPizza, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 340, 40));
+        getContentPane().add(btnEmergiaPizza, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 340, 40));
 
         btnEmergiaLinha.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEmergiaLinha.setText("Gráfico Geral das Emergias Linha");
@@ -81,29 +81,38 @@ public class Relatório extends javax.swing.JFrame {
                 btnEmergiaLinhaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEmergiaLinha, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, 340, 40));
+        getContentPane().add(btnEmergiaLinha, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 340, 40));
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton1.setText("Valores das Emergias");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnValor.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnValor.setText("Valores das Emergias");
+        btnValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnValorActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 710, -1, -1));
+        getContentPane().add(btnValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 710, -1, -1));
+
+        btnClassi.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnClassi.setText("Classificação Emergias");
+        btnClassi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClassiActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnClassi, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 340, 40));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel3.setText("Gráficos/Relatório");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 490, 300));
 
         txtEmMaterial.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtEmMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, 280, -1));
+        getContentPane().add(txtEmMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 510, 360, -1));
 
         txtEmMaoObra.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtEmMaoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 550, 280, -1));
+        getContentPane().add(txtEmMaoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 550, 360, -1));
 
         txtEmEletrica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtEmEletrica.addActionListener(new java.awt.event.ActionListener() {
@@ -111,10 +120,10 @@ public class Relatório extends javax.swing.JFrame {
                 txtEmEletricaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmEletrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 590, 280, -1));
+        getContentPane().add(txtEmEletrica, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 590, 360, -1));
 
         txtEmtermica.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        getContentPane().add(txtEmtermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 630, 280, -1));
+        getContentPane().add(txtEmtermica, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 630, 360, -1));
 
         txtEmFossil.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtEmFossil.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +131,7 @@ public class Relatório extends javax.swing.JFrame {
                 txtEmFossilActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmFossil, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 670, 280, -1));
+        getContentPane().add(txtEmFossil, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 670, 360, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1600, 1010));
@@ -316,7 +325,7 @@ telaGrafico.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmFossilActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValorActionPerformed
         try {
         txtEmMaterial.setText(String.format("Emergia Materiais: %.2e seJ", DadosEmergia.materiais));
         txtEmMaoObra.setText(String.format("Emergia Mão de Obra: %.2e seJ", DadosEmergia.maoDeObra));
@@ -326,7 +335,40 @@ telaGrafico.setVisible(true);
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Erro ao carregar valores de emergia: " + e.getMessage());
     }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnValorActionPerformed
+
+    private void btnClassiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClassiActionPerformed
+    // Agrupando os valores por tipo de emergia
+    double emergiaIndustrial = DadosEmergia.materiais;
+    double emergiaBiologica = DadosEmergia.maoDeObra;
+    double emergiaRenovavel = DadosEmergia.eletrica; // aqui considerando como renovável
+    double emergiaNaoRenovavel = DadosEmergia.entermica + DadosEmergia.combustivel;
+
+    // Criando o dataset do gráfico
+    DefaultPieDataset dataset = new DefaultPieDataset();
+    dataset.setValue("Emergia Industrial (Materiais)", emergiaIndustrial);
+    dataset.setValue("Emergia Biológica (Mão de Obra)", emergiaBiologica);
+    dataset.setValue("Emergia Renovável (Eletricidade)", emergiaRenovavel);
+    dataset.setValue("Emergia Não Renovável (Térmica + Fóssil)", emergiaNaoRenovavel);
+
+    // Criando o gráfico de pizza
+    JFreeChart graficoPizza = ChartFactory.createPieChart(
+        "Classificação das Emergias por Tipo",
+        dataset,
+        true, true, false
+    );
+
+    // Criando o painel do gráfico
+    ChartPanel painelGrafico = new ChartPanel(graficoPizza);
+
+    // Criando e exibindo o JFrame
+    JFrame janela = new JFrame("Gráfico de Pizza - Classificação Emergética");
+    janela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    janela.setSize(700, 500);
+    janela.setLocationRelativeTo(null);
+    janela.setContentPane(painelGrafico);
+    janela.setVisible(true);
+    }//GEN-LAST:event_btnClassiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -364,10 +406,11 @@ telaGrafico.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnClassi;
     private javax.swing.JButton btnEmergiaGeral;
     private javax.swing.JButton btnEmergiaLinha;
     private javax.swing.JButton btnEmergiaPizza;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnValor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

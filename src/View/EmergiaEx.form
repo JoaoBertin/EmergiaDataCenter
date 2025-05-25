@@ -61,28 +61,53 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-      </Group>
-    </DimensionLayout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="18" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;    &lt;body&gt;&#xa;        &lt;h2&gt;O que &#xe9; emergia e por que ela &#xe9; importante para Data Centers?&lt;/h2&gt;&#xa;        &#xa;        &lt;p&gt;Emergia &#xe9; um conceito desenvolvido pelo ecologista Howard Odum que mede o valor energ&#xe9;tico embutido nos recursos, bens e servi&#xe7;os necess&#xe1;rios para produzir algo.&lt;/p&gt;&#xa;        &#xa;        &lt;p&gt;Diferente da energia convencional, que contabiliza apenas o consumo direto, a emergia considera toda a cadeia de produ&#xe7;&#xe3;o envolvida, incluindo:&lt;/p&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Mat&#xe9;rias-primas&lt;/li&gt;&#xa;            &lt;li&gt;Processos industriais&lt;/li&gt;&#xa;            &lt;li&gt;Impactos ambientais&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;        &#xa;        &lt;p&gt;Nos data centers, entender a emergia &#xe9; fundamental para avaliar a sustentabilidade das opera&#xe7;&#xf5;es.&lt;/p&gt;&#xa;        &#xa;        &lt;p&gt;O consumo energ&#xe9;tico dessas infraestruturas &#xe9; elevado e influencia diretamente os custos financeiros e ambientais.&lt;/p&gt;&#xa;        &#xa;        &lt;p&gt;Ao aplicar a emergia, &#xe9; poss&#xed;vel determinar com mais precis&#xe3;o o impacto real dos servidores, sistemas de refrigera&#xe7;&#xe3;o e at&#xe9; da constru&#xe7;&#xe3;o f&#xed;sica do centro de dados.&lt;/p&gt;&#xa;        &#xa;        &lt;p&gt;Ao considerar a emergia na gest&#xe3;o de um data center, as empresas podem tomar decis&#xf5;es mais estrat&#xe9;gicas, como:&lt;/p&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Reduzir desperd&#xed;cios&lt;/li&gt;&#xa;            &lt;li&gt;Adotar fontes de energia renov&#xe1;veis&lt;/li&gt;&#xa;            &lt;li&gt;Melhorar a efici&#xea;ncia operacional&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;        &#xa;        &lt;p&gt;Dessa forma, al&#xe9;m de otimizar custos, contribuem para um futuro mais sustent&#xe1;vel.&lt;/p&gt;&#xa;    &lt;/body&gt;&#xa;&lt;/html&gt;"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="10" y="-10" width="-1" height="380"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="18" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;    &lt;body&gt;&#xa;        &lt;h2&gt;O que &#xe9; um Data Center?&lt;/h2&gt;&#xa;        &#xa;        &lt;p&gt;Um Data Center &#xe9; uma infraestrutura projetada para armazenar, processar e distribuir grandes volumes de dados.&lt;/p&gt;&#xa;        &#xa;        &lt;p&gt;Esses centros s&#xe3;o fundamentais para empresas, servi&#xe7;os digitais e plataformas que dependem de conectividade &#xa;        e processamento em larga escala.&lt;/p&gt;&#xa;        &#xa;        &lt;p&gt;Os principais elementos de um Data Center incluem:&lt;/p&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Servidores &#x2013; respons&#xe1;veis por armazenar e processar informa&#xe7;&#xf5;es.&lt;/li&gt;&#xa;            &lt;li&gt;Sistemas de refrigera&#xe7;&#xe3;o &#x2013; garantem o controle t&#xe9;rmico dos equipamentos.&lt;/li&gt;&#xa;            &lt;li&gt;Fontes de energia redundantes &#x2013; asseguram funcionamento ininterrupto.&lt;/li&gt;&#xa;            &lt;li&gt;Redes de comunica&#xe7;&#xe3;o &#x2013; permitem o fluxo eficiente de dados.&lt;/li&gt;&#xa;            &lt;li&gt;Protocolos de seguran&#xe7;a &#x2013; protegem contra acessos n&#xe3;o autorizados e ciberamea&#xe7;as.&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;        &#xa;        &lt;p&gt;Os Data Centers s&#xe3;o essenciais para suportar servi&#xe7;os online, computa&#xe7;&#xe3;o em nuvem e opera&#xe7;&#xf5;es cr&#xed;ticas &#xa;        de diversas organiza&#xe7;&#xf5;es.&lt;/p&gt;&#xa;        &#xa;        &lt;p&gt;Com a evolu&#xe7;&#xe3;o da tecnologia, esses centros continuam a se tornar mais eficientes e seguros, garantindo &#xa;        o alto desempenho dos sistemas digitais.&lt;/p&gt;&#xa;    &lt;/body&gt;&#xa;&lt;/html&gt;"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="10" y="380" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/View/Imagens/DataCenter Login2.jpg"/>
         </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
   </SubComponents>
 </Form>

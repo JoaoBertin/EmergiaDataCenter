@@ -26,6 +26,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -37,8 +38,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         setSize(new java.awt.Dimension(1280, 960));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("<html>\n    <body>\n        <h2>Por que calcular a emergia é importante?</h2>\n        \n        <p>O cálculo da emergia permite avaliar o impacto energético e ambiental de um sistema, <br><br> considerando \n        todos os recursos utilizados em sua produção e funcionamento.</p>\n        \n        <p>Com essa análise, é possível identificar oportunidades para:</p>\n        <ul>\n            <li>Reduzir desperdícios e otimizar processos.</li>\n            <li>Aprimorar a eficiência no uso dos recursos.</li>\n            <li>Comparar fontes renováveis e não renováveis.</li>\n            <li>Minimizar impactos ambientais e emissões de carbono.</li>\n            <li>Tomar decisões estratégicas sustentáveis.</li>\n        </ul>\n        \n        <p>A aba <strong>Emergia</strong> fornecerá informações detalhadas sobre o conceito de emergia \n        e a explicação sobre o funcionamento de um <strong>Data Center</strong>, <br><br> permitindo uma visão \n        mais completa dos processos envolvidos.</p>\n        <br><br>\n        <p>A calculadora de emergia gera um gráfico ao final do cálculo, permitindo visualizar \n        os impactos e oportunidades de melhoria.</p>\n    </body>\n</html>");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 400));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jMenu1.setText("Calculo");
 
@@ -65,17 +73,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,6 +126,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
