@@ -28,12 +28,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
         lblTexto = new javax.swing.JLabel();
         lblFundo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnOperação = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         mnRel = new javax.swing.JMenu();
+        mnRel1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -70,6 +78,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
         mnRel.setText("Relatório");
         jMenuBar1.add(mnRel);
 
+        mnRel1.setText("O que é emergia?");
+
+        jMenuItem2.setText("Explicação");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        mnRel1.add(jMenuItem2);
+
+        jMenuBar1.add(mnRel1);
+
         setJMenuBar(jMenuBar1);
 
         pack();
@@ -82,6 +102,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         this.controller.navegarParaConsulta();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        EmergiaEx tela = new EmergiaEx();
+        tela.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,11 +145,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JLabel lblFundo;
     private javax.swing.JLabel lblTexto;
     private javax.swing.JMenu mnOperação;
     private javax.swing.JMenu mnRel;
+    private javax.swing.JMenu mnRel1;
     // End of variables declaration//GEN-END:variables
 }
