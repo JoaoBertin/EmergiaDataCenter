@@ -4,19 +4,17 @@
  */
 package View;
 
-import Controller.MenuPrincipalController;
-
-
+/**
+ *
+ * @author davic
+ */
 public class MenuPrincipal extends javax.swing.JFrame {
-
-    private final MenuPrincipalController controller;
 
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
         initComponents();
-        this.controller = new MenuPrincipalController(this);
     }
 
     /**
@@ -28,98 +26,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
-=======
-        jMenuItem1 = new javax.swing.JMenuItem();
->>>>>>> 1884d707a05594255f0491cc6bc2908e7bb4f9af
-        jMenu1 = new javax.swing.JMenu();
-        lblTexto = new javax.swing.JLabel();
-        lblFundo = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        mnEmergia = new javax.swing.JMenu();
-        mnOperação = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        mnRel = new javax.swing.JMenu();
-        mnRel1 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-
-        jMenuItem1.setText("jMenuItem1");
-
-        jMenu1.setText("jMenu1");
-
-        jMenu1.setText("jMenu1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTexto.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblTexto.setForeground(new java.awt.Color(255, 255, 255));
-        lblTexto.setText("<html> Emergia e Fontes de Energia: Entendendo os Cálculos Energéticos<br><br>  Emergia:<br><br> Quantidade total de energia, geralmente solar, usada para produzir bens, serviços ou processos. <br><br> Ela considera toda a energia investida desde a origem até o resultado final, convertida em joules solares equivalentes (seJ).<br><br>  Energia elétrica: <br><br> Forma versátil de energia obtida da conversão de fontes como água, vento ou calor. <br><br> Tem alto valor emergético por envolver tecnologias complexas e infraestrutura.<br><br> Energia de mão de obra:<br><br> Refere-se ao esforço físico e intelectual humano nos processos produtivos.<br><br> Seu valor pode ser estimado pela energia dos alimentos e dos recursos usados para sustentar o trabalhador.<br><br> Energia térmica:<br><br> Relacionada ao calor, usada para aquecer ambientes, cozinhar ou realizar processos industriais. <br><br> A eficiência de uso influencia diretamente o investimento emergético necessário.<br><br>  Energia de combustíveis fósseis:<br><br> Petróleo, gás e carvão, é altamente concentrada e não renovável.<br><br> Possui custo emergético elevado, pois levou milhões de anos e muita energia solar para se formar.<br><br>   </html> ");
-        getContentPane().add(lblTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 620));
-
-        lblFundo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
-        lblFundo.setText("lblPlasn");
-        getContentPane().add(lblFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1630, -1));
-
-        mnEmergia.setText("Emergia");
-        mnEmergia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuBar1.add(mnEmergia);
-
-        mnOperação.setText("Cálculo");
-        mnOperação.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        mnOperação.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnOperaçãoActionPerformed(evt);
-            }
-        });
-
-        jMenuItem3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem3.setText("Calculadora");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        mnOperação.add(jMenuItem3);
-
-        jMenuBar1.add(mnOperação);
-
-        mnRel.setText("Relatório");
-        mnRel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuBar1.add(mnRel);
-
-        mnRel1.setText("O que é emergia?");
-
-        jMenuItem2.setText("Explicação");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        mnRel1.add(jMenuItem2);
-
-        jMenuBar1.add(mnRel1);
-
-        setJMenuBar(jMenuBar1);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void mnOperaçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnOperaçãoActionPerformed
-        
-    }//GEN-LAST:event_mnOperaçãoActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        this.controller.navegarParaConsulta();
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        EmergiaEx tela = new EmergiaEx();
-        tela.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,16 +78,5 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JLabel lblFundo;
-    private javax.swing.JLabel lblTexto;
-    private javax.swing.JMenu mnEmergia;
-    private javax.swing.JMenu mnOperação;
-    private javax.swing.JMenu mnRel;
-    private javax.swing.JMenu mnRel1;
     // End of variables declaration//GEN-END:variables
 }
