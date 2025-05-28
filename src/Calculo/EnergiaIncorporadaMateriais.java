@@ -46,7 +46,7 @@ public class EnergiaIncorporadaMateriais {
                 transformidade = 6.5e9;
                 break;
             case "Resina":
-                energiaEspecifica = 90.0; // valor médio para poliéster/epóxi
+                energiaEspecifica = 90.0; 
                 transformidade = 6.5e9;
                 break;
             case "Vidro Temperado":
@@ -58,7 +58,7 @@ public class EnergiaIncorporadaMateriais {
                 transformidade = 5.0e9;
                 break;
             case "Água Tratada":
-                energiaEspecifica = 0.02; // 0.02 MJ/kg (≈20 MJ/m³)
+                energiaEspecifica = 0.02; 
                 transformidade = 1.0e8;
                 break;
             default:

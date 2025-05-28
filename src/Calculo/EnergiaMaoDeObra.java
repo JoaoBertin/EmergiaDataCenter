@@ -28,7 +28,7 @@ public class EnergiaMaoDeObra {
                 this.energiaMediaHora = 54_000_000; // 15000 W * 3600 s
                 break;
             case "Eng. Elétrico / Téc. Eletrotécnico":
-                this.energiaMediaHora = 12_600_000; // 3500 W * 3600 s
+                
                 break;
             case "Analista de Cibersegurança":
                 this.energiaMediaHora = 41_400_000; // 11500 W * 3600 s
@@ -79,12 +79,9 @@ public class EnergiaMaoDeObra {
         return energiaDisponivel * transformidade;
     }
 
-    // Calcula a emergia total considerando os dias trabalhados
-    public double calcularFTFMaoDeObra() {
-        double energiaDisponivel = numeroTrabalhadores * horasTrabalhadas * diasTrabalhados * energiaMediaHora;
-        return energiaDisponivel * transformidade;
+   
     }
-}
+
 
 
 

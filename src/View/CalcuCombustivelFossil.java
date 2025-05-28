@@ -24,7 +24,7 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         txtVolume = new javax.swing.JTextField();
         txtResultado = new javax.swing.JTextField();
         btnRegistroCombus = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnTelaRelatorio = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -34,7 +34,6 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         btnRelatorio = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -70,14 +69,14 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         });
         getContentPane().add(btnRegistroCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 590, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton1.setText("Relatório");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnTelaRelatorio.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnTelaRelatorio.setText("Relatório");
+        btnTelaRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnTelaRelatorioActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 680, -1, -1));
+        getContentPane().add(btnTelaRelatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 680, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/fundo.png"))); // NOI18N
@@ -181,11 +180,11 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         this.setVisible(false); // Oculta a tela atual
     }//GEN-LAST:event_btnRelatorioActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnTelaRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaRelatorioActionPerformed
         Relatório tela = new Relatório(); // Redirecionamento da tela para o relatório
         tela.setVisible(true); // Cria e exibe a tela do relatório
         this.setVisible(false); // Oculta a tela atual
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnTelaRelatorioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,8 +224,8 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegistroCombus;
     private javax.swing.JMenuItem btnRelatorio;
+    private javax.swing.JButton btnTelaRelatorio;
     private javax.swing.JComboBox<String> cboxCombustivel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

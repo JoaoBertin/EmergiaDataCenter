@@ -18,4 +18,4 @@ public class DadosEmergia {
 
     // Valor acumulado da emergia térmica (refrigeração)
     public static double entermica = 0;
-}
+}   
