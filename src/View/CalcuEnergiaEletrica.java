@@ -209,6 +209,7 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         CalcuEnTermica tela = new CalcuEnTermica(); // Redirecionamento da tela para o próximo calculo
         tela.setVisible(true); // Cria e exibe a tela do calculo
         this.setVisible(false); // Oculta a tela atual
+        tela.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_btnNextTermicaActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
@@ -219,12 +220,14 @@ public class CalcuEnergiaEletrica extends javax.swing.JFrame {
         MenuPrincipal tela = new MenuPrincipal(); // Redirecionamento da tela para o menu principal
         tela.setVisible(true); // Cria e exibe a tela do menu principal
         this.setVisible(false); // Oculta a tela atual
+        tela.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         Relatório tela = new Relatório(); // Redirecionamento da tela para o relatório
         tela.setVisible(true); // Cria e exibe a tela do relatório
         this.setVisible(false); // Oculta a tela atual
+        tela.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
 

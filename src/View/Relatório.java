@@ -225,12 +225,14 @@ telaGrafico.setVisible(true);
         MenuPrincipal con = new MenuPrincipal(); // Redirecionamento da tela para o menu princiapl
         con.setVisible(true); // Cria e exibe a tela do menu principal
         this.setVisible(false); // Oculta a tela atual
+        con.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         CalcuEnergiaIncorporada con = new CalcuEnergiaIncorporada(); // Redirecionamento da tela para o calculo
         con.setVisible(true); // Cria e exibe a tela do calculo
         this.setVisible(false); // Oculta a tela atual
+        con.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void btnEmergiaPizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmergiaPizzaActionPerformed

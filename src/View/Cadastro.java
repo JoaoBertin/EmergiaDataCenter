@@ -3,7 +3,7 @@ package View;
 
 import Controller.LoginController;
 import javax.swing.JOptionPane;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPasswordField;
@@ -11,10 +11,10 @@ import javax.swing.JTextField;
 
 
 public class Cadastro extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Cadastro
-     */
+    
+    
+    
+    
     public Cadastro() {
         initComponents();
         
@@ -139,7 +139,7 @@ public class Cadastro extends javax.swing.JFrame {
             telaDeLogin.setVisible(true);
             // Oculta a tela atual
             this.setVisible(false);
-            
+            telaDeLogin.setLocationRelativeTo(null); // Centraliza a tela
         } catch (SQLException ex) {
              // Trata exceção SQL caso ocorra um erro durante o cadastro
         }
@@ -152,6 +152,7 @@ public class Cadastro extends javax.swing.JFrame {
         Login telaDeLogin = new Login();
         telaDeLogin.setVisible(true); // Cria e exibe a tela de login
         this.setVisible(false); // Oculta a tela atual
+        telaDeLogin.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void txtEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmpresaActionPerformed

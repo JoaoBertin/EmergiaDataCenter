@@ -35,6 +35,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         setSize(new java.awt.Dimension(1280, 960));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -42,7 +43,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("<html>\n    <body>\n        <h2 style=\"text-align: center;\">Por que calcular a emergia é importante?</h2>\n        \n        <p style=\"text-align: center;\">O cálculo da emergia permite avaliar o impacto energético e ambiental de um sistema, <br><br> considerando \n        todos os recursos utilizados em sua produção e funcionamento.</p>\n        \n        <p style=\"text-align: center;\">Com essa análise, é possível identificar oportunidades para:</p>\n        <ul style=\"\">\n            <li>Reduzir desperdícios e otimizar processos.</li>\n            <li>Aprimorar a eficiência no uso dos recursos.</li>\n            <li>Comparar fontes renováveis e não renováveis.</li>\n            <li>Minimizar impactos ambientais e emissões de carbono.</li>\n            <li>Tomar decisões estratégicas sustentáveis.</li>\n        </ul>\n        \n        <p style=\"text-align: center;\">A aba <strong>Emergia</strong> fornecerá informações detalhadas sobre o conceito de emergia \n        e a explicação sobre o funcionamento de um <strong>Data Center</strong>, <br><br> permitindo uma visão \n        mais completa dos processos envolvidos.</p>\n        <br><br>\n        <p style=\"text-align: center;\">A calculadora de emergia gera um gráfico ao final do cálculo, permitindo visualizar \n        os impactos e oportunidades de melhoria.</p>\n    </body>\n</html>");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, 400));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 400));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/DataCenter Login2.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

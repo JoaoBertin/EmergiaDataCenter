@@ -105,6 +105,7 @@ public class Login extends javax.swing.JFrame {
             // Cria uma nova instância do menu principal, que aparecerá após o login
             MenuPrincipal telaDeMenu = new MenuPrincipal();
             telaDeMenu.setVisible(true);
+            telaDeMenu.setLocationRelativeTo(null); // Centraliza a tela
             this.setVisible(false);
             JOptionPane.showMessageDialog(rootPane, "Logado com sucesso");
             }else{
@@ -120,6 +121,7 @@ public class Login extends javax.swing.JFrame {
         Cadastro cadastro = new Cadastro(); //Redirecionamte para a tela de cadastro
         cadastro.setVisible(true); // Cria e exibe a tela de cadastro
         this.setVisible(false); // Oculta a tela atual
+        cadastro.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public JTextField getTxtEmail() {

@@ -34,6 +34,7 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         btnRelatorio = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 960));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -172,18 +173,21 @@ public class CalcuCombustivelFossil extends javax.swing.JFrame {
         MenuPrincipal tela = new MenuPrincipal(); // Redirecionamento da tela para o menu principal
         tela.setVisible(true); // Cria e exibe a tela do menu principal
         this.setVisible(false); // Oculta a tela atual
+        tela.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioActionPerformed
         Relatório tela = new Relatório(); // Redirecionamento da tela para o relatório
         tela.setVisible(true); // Cria e exibe a tela do relatório
         this.setVisible(false); // Oculta a tela atual
+        tela.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_btnRelatorioActionPerformed
 
     private void btnTelaRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaRelatorioActionPerformed
         Relatório tela = new Relatório(); // Redirecionamento da tela para o relatório
         tela.setVisible(true); // Cria e exibe a tela do relatório
         this.setVisible(false); // Oculta a tela atual
+        tela.setLocationRelativeTo(null); // Centraliza a tela
     }//GEN-LAST:event_btnTelaRelatorioActionPerformed
 
     /**
